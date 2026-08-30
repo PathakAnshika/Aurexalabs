@@ -11,7 +11,7 @@ const categories = [
     description:
       "Immersive websites, e-commerce experiences and digital platforms.",
     number: "01",
-    image: "/image/Work2.jpg",
+    image: "/image/work2.jpg",
     slug: "web",
   },
   {
