@@ -1,7 +1,4 @@
 import { Resend } from "resend";
-
-
-
 export async function POST(request) {
   try {
     const resend = new Resend(
