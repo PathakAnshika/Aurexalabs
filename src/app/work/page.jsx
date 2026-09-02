@@ -6,50 +6,58 @@ import { motion } from "framer-motion";
 const projects = [
   {
     number: "01",
-    type: "WEB",
+    name: "WEB PAGE",
+    // type: "WEBSITE",
     image: "/image/work1.jpg",
     slug: "shri-chandreshwar",
   },
   {
     number: "02",
-    type: "ECOMMERCE",
+    name: "WEB PAGE",
+    // type: "ECOMMERCE",
     image: "/image/work2.jpg",
     slug: "prinvick",
   },
   {
     number: "03",
-    type: "APPLICATIONS",
+    name: "APPLICATION",
+    // type: "APPLICATIONS",
     image: "/image/work3.jpg",
     slug: "inventory-management",
   },
   {
     number: "04",
-    type: "SYSTEMS",
+    name: "DASHBOARD",
+    // type: "SYSTEMS",
     image: "/image/work4.jpg",
     slug: "erp-hrms",
   },
   {
     number: "05",
-    type: "APPLICATIONS",
+    name: "APPLICATION",
+    // type: "APPLICATIONS",
     image: "/image/work5.jpg",
     slug: "tenneco-system",
   },
   {
     number: "06",
-    type: "DESIGN",
-    image: "/image/work6.jpg",
+    name: "BRAND / UIUX",
+    // type: "DESIGN",
+    image: "/image/work6.png",
     slug: "brand-uiux",
   },
   {
     number: "07",
-    type: "AI",
-    image: "/image/work7.jpg",
+    name: "AI AUTOMATION",
+    // type: "AI",
+    image: "/image/work7.png",
     slug: "ai-automation",
   },
   {
     number: "08",
-    type: "TEMPLATES",
-    image: "/image/work8.jpg",
+    name: "DIGITAL PRODUCT",
+    // type: "TEMPLATES",
+    image: "/image/work8.png",
     slug: "digital-product",
   },
 ];
@@ -62,66 +70,57 @@ export default function WorkPage() {
           HERO
       ========================= */}
 
+      <section className="work-hero">
 
+        <Link
+          href="/"
+          className="work-back"
+        >
+          ← BACK HOME
+        </Link>
 
-    <section className="work-hero">
+        <div className="work-hero-label">
+          WORK / 08
+        </div>
 
-    <Link
-    href="/"
-    className="work-back"
-    style={{
-      position: "relative",
-      top: "-45px",
-    }}
-  >
-    ← BACK HOME
-  </Link>
+        <motion.h1
+          initial={{
+            opacity: 0,
+            y: 50,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 1,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+        >
+          Selected <em>work.</em>
+        </motion.h1>
 
+        <motion.p
+          initial={{
+            opacity: 0,
+            y: 20,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 0.8,
+            delay: 0.25,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+        >
+          A collection of digital experiences,
+          systems, products and ideas we've built.
+        </motion.p>
 
+      </section>
 
-  <div className="work-hero-label">
-    WORK / 08
-  </div>
-
-  <motion.h1
-    initial={{
-      opacity: 0,
-      y: 50,
-    }}
-    animate={{
-      opacity: 1,
-      y: 0,
-    }}
-    transition={{
-      duration: 1,
-      ease: [0.22, 1, 0.36, 1],
-    }}
-  >
-    Selected <em>work.</em>
-  </motion.h1>
-
-  <motion.p
-    initial={{
-      opacity: 0,
-      y: 20,
-    }}
-    animate={{
-      opacity: 1,
-      y: 0,
-    }}
-    transition={{
-      duration: 0.8,
-      delay: 0.25,
-      ease: [0.22, 1, 0.36, 1],
-    }}
-  >
-    A collection of digital experiences,
-    systems, products and ideas we've built.
-  </motion.p>
-
-   
-
-</section>
 
       {/* =========================
           PROJECT GRID
@@ -162,33 +161,27 @@ export default function WorkPage() {
               className="work-card"
             >
 
-              {/* IMAGE */}
+              {/* =========================
+                  IMAGE
+              ========================= */}
 
               <div className="work-card-image">
 
                 <img
                   src={project.image}
                   alt={project.name}
+                  loading={index === 0 ? "eager" : "lazy"}
                 />
 
                 <div className="work-card-overlay" />
-
-
-                {/* NUMBER */}
 
                 <span className="work-card-number">
                   {project.number}
                 </span>
 
-
-                {/* ARROW */}
-
                 <span className="work-card-arrow">
                   ↗
                 </span>
-
-
-                {/* HOVER */}
 
                 <div className="work-card-hover">
 
@@ -205,7 +198,9 @@ export default function WorkPage() {
               </div>
 
 
-              {/* INFO */}
+              {/* =========================
+                  INFO
+              ========================= */}
 
               <div className="work-card-info">
 

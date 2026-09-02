@@ -22,6 +22,8 @@ export default function Navbar() {
       <nav className="nav-links">
         <Link href="/work">Work</Link>
         <Link href="/Lab">Lab</Link>
+
+        <Link href="/case-studies">Case-studies</Link>
         <Link href="#about">About</Link>
         <Link href="#process">Process</Link>
 
@@ -84,6 +86,12 @@ export default function Navbar() {
           <Link href="/Lab" onClick={closeMenu}>
             <span>02</span>
             LAB
+            <b>↗</b>
+          </Link>
+
+           <Link href="/case-studies" onClick={closeMenu}>
+            <span>03</span>
+            Case-studies
             <b>↗</b>
           </Link>
 

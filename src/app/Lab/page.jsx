@@ -159,18 +159,12 @@ export default function Lab() {
 /* =========================================
    SCROLL IMAGE
 ========================================= */
-function RevealImage({
-  image,
-  className,
-}) {
+function RevealImage({ image, className, index }) {
   const ref = useRef(null);
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: [
-      "start 90%",
-      "center 35%",
-    ],
+    offset: ["start 90%", "center 35%"],
   });
 
   const scale = useTransform(
@@ -198,11 +192,7 @@ function RevealImage({
   );
 
   return (
-    <div
-      ref={ref}
-      className={`lab-photo-wrap ${className}`}
-    >
-
+    <div ref={ref} className={`lab-photo-wrap ${className}`}>
       <motion.div
         className="lab-photo"
         style={{
@@ -211,23 +201,18 @@ function RevealImage({
           y,
         }}
       >
-
-        {/* Blur ko separate layer par rakha hai */}
         <motion.div
-          style={{
-            width: "100%",
-            height: "100%",
-            filter: useMotionTemplate`blur(${blur}px)`,
-          }}
-        >
-          <img
-            src={image}
-            alt=""
-          />
-        </motion.div>
-
+  className="lab-photo-inner"
+  style={{
+    filter: useMotionTemplate`blur(${blur}px)`,
+  }}
+>
+  <img
+    src={image}
+    alt={`Aurexa Labs Lab experiment ${index + 1}`}
+  />
+</motion.div>
       </motion.div>
-
     </div>
   );
 }
