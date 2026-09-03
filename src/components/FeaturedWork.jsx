@@ -12,7 +12,7 @@ const categories = [
       "Immersive websites, e-commerce experiences and digital platforms.",
     number: "01",
     image: "/image/work2.jpg",
-    slug: "web",
+    // slug: "web",
   },
   {
     title: "APPLICATIONS",
@@ -209,10 +209,10 @@ export default function FeaturedWork() {
                   ↗
                 </span>
 
-                <div className="category-center">
+                {/* <div className="category-center">
                   <span>EXPLORE</span>
                   <span>↗</span>
-                </div>
+                </div> */}
 
               </div>
 

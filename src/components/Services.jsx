@@ -456,9 +456,9 @@ export default function Services() {
                     {service.number}
                   </span>
 
-                  <span className="service-image-arrow">
+                  {/* <span className="service-image-arrow">
                     ↗
-                  </span>
+                  </span> */}
 
                 </div>
 
@@ -504,7 +504,7 @@ export default function Services() {
 
                 {/* CARD FOOTER */}
 
-                <div className="service-card-footer">
+                {/* <div className="service-card-footer">
 
                   <span>
                     VIEW SERVICE
@@ -514,7 +514,7 @@ export default function Services() {
                     ↗
                   </span>
 
-                </div>
+                </div> */}
 
 
                 {/* ANIMATED LINE */}
