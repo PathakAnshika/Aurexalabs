@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+   background: #101010;
+  color: #eeeae4;
   --foreground: #171717;
 }
 
@@ -3153,8 +3154,6 @@ body {
 
 
 
-
-
 /* =========================================================
    PROCESS SECTION
 ========================================================= */
@@ -3175,6 +3174,8 @@ body {
   border: none !important;
 
   outline: none !important;
+  
+  background: #101010;
 
   margin: 0 0 70px;
 }
@@ -3709,6 +3710,8 @@ body {
   background: transparent;
 
   color: #eeeae4;
+
+  background: #101010;
 
   overflow: hidden;
 }

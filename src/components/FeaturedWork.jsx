@@ -1,251 +1,151 @@
-"use client";
-
 import Link from "next/link";
-import { useState, useRef } from "react";
-import { motion, useInView } from "framer-motion";
 
-const categories = [
+const selectedWork = [
   {
-    title: "WEB",
-    subtitle: "Websites & Digital Experiences",
-    description:
-      "Immersive websites, e-commerce experiences and digital platforms.",
     number: "01",
-    image: "/image/work2.jpg",
-    // slug: "web",
+    title: "SHRI CHANDRESHWAR DHAM",
+    category: "DIGITAL EXPERIENCE / WEB",
+    year: "2026",
+    image: "/image/work1.jpg",
+    slug: "shri-chandreshwar",
+    description:
+      "A digital experience built to bring the identity and presence of a place of faith online.",
   },
   {
-    title: "APPLICATIONS",
-    subtitle: "Custom Digital Systems",
-    description:
-      "Modern business applications, intelligent dashboards and scalable digital systems.",
     number: "02",
-    image: "/image/S2.jpg",
-    slug: "applications",
+    title: "PRINVICK",
+    category: "ECOMMERCE",
+    year: "2026",
+    image: "/image/work2.jpg",
+    slug: "prinvick",
+    description:
+      "A focused ecommerce experience designed to turn a product catalogue into a digital storefront.",
   },
   {
-    title: "DESIGN",
-    subtitle: "Visual & Brand Experiences",
-    description:
-      "Brand identities, UI/UX, posters, templates and visual systems.",
     number: "03",
-    image: "/image/S3.jpg",
-    slug: "design",
-  },
-  {
-    title: "AI",
-    subtitle: "Intelligent Digital Solutions",
+    title: "INVENTORY MANAGEMENT",
+    category: "APPLICATION / SYSTEM",
+    year: "2026",
+    image: "/image/work3.jpg",
+    slug: "inventory-management",
     description:
-      "AI-powered products, automation and intelligent digital experiences.",
-    number: "04",
-    image: "/image/work7.jpg",
-    slug: "ai",
+      "A practical application designed to make complex inventory workflows simpler and easier to manage.",
   },
 ];
 
-export default function FeaturedWork() {
-  const [active, setActive] = useState(null);
-  const [mouse, setMouse] = useState({ x: 0, y: 0 });
-
-  const sectionRef = useRef(null);
-
-  const isInView = useInView(sectionRef, {
-    once: false,
-    amount: 0.2,
-  });
-
-  const handleMove = (e, index) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-
-    const x =
-      ((e.clientX - rect.left) / rect.width - 0.5) * 12;
-
-    const y =
-      ((e.clientY - rect.top) / rect.height - 0.5) * 12;
-
-    setMouse({ x, y });
-    setActive(index);
-  };
-
+export default function SelectedWork() {
   return (
     <section
-      ref={sectionRef}
-      className="featured-work"
       id="work"
+      className="bg-[#101010] px-[5vw] py-24 text-[#eeeae4] sm:py-28 md:py-36"
     >
 
-      {/* ================= HEADING ================= */}
+      {/* ================= HEADER ================= */}
+      <div className="mb-16 border-t border-[#eeeae4]/10 pt-6 sm:mb-20 md:mb-24">
 
-      <div className="work-heading">
+        <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
 
-        <div>
+          <div className="flex items-center gap-3">
+            <span className="text-[9px] tracking-[0.28em] text-[#c7ff00]">
+              01
+            </span>
 
-          <motion.p
-            className="work-eyebrow"
-            initial={{
-              opacity: 0,
-              y: 20,
-            }}
-            animate={{
-              opacity: isInView ? 1 : 0,
-              y: isInView ? 0 : 20,
-            }}
-            transition={{
-              duration: 0.8,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-          >
-            SELECTED WORK
-          </motion.p>
+            <span className="text-[9px] tracking-[0.28em] text-[#817b75]">
+              SELECTED WORK
+            </span>
+          </div>
 
-
-          <motion.h2
-            initial={{
-              opacity: 0,
-              y: 35,
-            }}
-            animate={{
-              opacity: isInView ? 1 : 0,
-              y: isInView ? 0 : 35,
-            }}
-            transition={{
-              duration: 1,
-              delay: 0.08,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-          >
-            What we
-            <br />
-            <em>create.</em>
-          </motion.h2>
+          <p className="max-w-[420px] text-[13px] leading-6 text-[#817b75] sm:text-sm sm:leading-7">
+            A selection of digital work across web, ecommerce,
+            applications and systems.
+          </p>
 
         </div>
 
-
-        {/* DESCRIPTION */}
-
-        <motion.p
-          className="work-description"
-          initial={{
-            opacity: 0,
-            y: 25,
-          }}
-          animate={{
-            opacity: isInView ? 1 : 0,
-            y: isInView ? 0 : 25,
-          }}
-          transition={{
-            duration: 0.9,
-            delay: 0.22,
-            ease: [0.22, 1, 0.36, 1],
-          }}
-        >
-          From digital experiences to intelligent
-          applications, we create work designed
-          to move brands forward.
-        </motion.p>
-
       </div>
 
 
-      {/* ================= GRID ================= */}
+      {/* ================= PROJECTS ================= */}
+      <div className="space-y-24 sm:space-y-28 md:space-y-36">
 
-      <div className="category-grid">
+        {selectedWork.map((project, index) => (
 
-        {categories.map((category, index) => (
-
-          <motion.div
-            key={category.slug}
-            initial={{
-              opacity: 0,
-              y: 30,
-            }}
-            animate={{
-              opacity: isInView ? 1 : 0,
-              y: isInView ? 0 : 30,
-            }}
-            transition={{
-              duration: 0.8,
-              delay: 0.35 + index * 0.08,
-              ease: [0.22, 1, 0.36, 1],
-            }}
+          <Link
+            key={project.number}
+            href={`/work/${project.slug}`}
+            className="group block"
           >
 
-            <Link
-              href={`/work/${category.slug}`}
-              className="category-card"
+            {/* IMAGE */}
+            <div className="relative overflow-hidden rounded-[24px] bg-[#080808] sm:rounded-[30px]">
 
-              onMouseEnter={() => setActive(index)}
-
-              onMouseLeave={() => setActive(null)}
-
-              onMouseMove={(e) =>
-                handleMove(e, index)
-              }
-            >
-
-              {/* IMAGE */}
-
-              <div className="category-image">
+              <div className="aspect-[16/10] w-full overflow-hidden">
 
                 <img
-                  src={category.image}
-                  alt={category.title}
-                  style={{
-                    transform:
-                      active === index
-                        ? `scale(1.07) translate(${mouse.x}px, ${mouse.y}px)`
-                        : "scale(1)",
-                  }}
+                  src={project.image}
+                  alt={project.title}
+                  className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.025]"
                 />
 
-                <div className="category-overlay" />
-
-                <span className="category-number">
-                  {category.number}
-                </span>
-
-                <span className="category-arrow">
-                  ↗
-                </span>
-
-                {/* <div className="category-center">
-                  <span>EXPLORE</span>
-                  <span>↗</span>
-                </div> */}
-
               </div>
 
+              {/* subtle overlay */}
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#101010]/30 via-transparent to-transparent opacity-60" />
 
-              {/* CONTENT */}
+              {/* project number */}
+              <div className="absolute left-5 top-5 flex h-9 w-9 items-center justify-center rounded-full border border-[#eeeae4]/20 bg-[#101010]/40 text-[8px] tracking-[0.15em] backdrop-blur-sm sm:left-7 sm:top-7">
+                {project.number}
+              </div>
 
-              <div className="category-content">
+              {/* arrow */}
+              <div className="absolute bottom-5 right-5 flex h-11 w-11 translate-y-2 items-center justify-center rounded-full border border-[#c7ff00]/40 bg-[#101010]/70 text-[#c7ff00] opacity-0 backdrop-blur-sm transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 sm:bottom-7 sm:right-7">
+                ↗
+              </div>
 
-                <div>
+            </div>
 
-                  <h3>
-                    {category.title}
-                  </h3>
 
-                  <p className="category-subtitle">
-                    {category.subtitle}
-                  </p>
+            {/* PROJECT INFO */}
+            <div className="mt-6 grid gap-5 border-b border-[#eeeae4]/10 pb-7 sm:mt-7 sm:pb-8 md:grid-cols-[1fr_auto] md:items-end">
 
+              <div>
+
+                <div className="mb-3 flex items-center gap-3 text-[8px] tracking-[0.2em] text-[#625d57]">
+                  <span>{project.category}</span>
+                  <span className="text-[#c7ff00]">/</span>
+                  <span>{project.year}</span>
                 </div>
 
-                <p className="category-description">
-                  {category.description}
-                </p>
+                <h3 className="max-w-[900px] text-[clamp(30px,4vw,58px)] font-normal leading-[0.95] tracking-[-0.045em] transition-colors duration-300 group-hover:text-[#c7ff00]">
+                  {project.title}
+                </h3>
 
               </div>
 
-            </Link>
 
-          </motion.div>
+              <p className="max-w-[360px] text-[12px] leading-5 text-[#817b75] sm:text-[13px] sm:leading-6 md:text-right">
+                {project.description}
+              </p>
 
+            </div>
+
+          </Link>
+
+           
         ))}
+       <Link
+  href="/work"
+  className="group relative -top-20 inline-flex items-center gap-4 border-b border-[#eeeae4]/20 pb-2.5 text-[9px] font-medium tracking-[0.25em] text-[#eeeae4] transition-all duration-300 hover:border-[#c7ff00] hover:text-[#c7ff00]"
+>
+  <span>VIEW ALL WORK</span>
+
+  <span className="text-[15px] leading-none text-[#c7ff00] transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
+    ↗
+  </span>
+</Link>
 
       </div>
+  
 
     </section>
   );

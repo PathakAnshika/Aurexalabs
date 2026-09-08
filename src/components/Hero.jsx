@@ -1,198 +1,90 @@
 "use client";
 
+import Link from "next/link";
+
 export default function Hero() {
   return (
-    <section className="hero">
+   <section className="hero">
+  {/* Geometric background */}
+  <div className="hero-shapes" aria-hidden="true">
+    <span className="shape shape-1" />
+    <span className="shape shape-2" />
+    <span className="shape shape-3" />
+    <span className="shape shape-4" />
+    <span className="shape shape-5" />
+  </div>
 
-      {/* =================================================
-          DESKTOP HERO
-      ================================================= */}
+  {/* Left visual */}
+  <div className="hero-image">
+    <img
+      src="/image/hero-bg.png"
+      alt="Aurexa Labs visual"
+    />
+  </div>
 
-      <div className="hero-desktop">
+  {/* Right content */}
+  <div className="hero-content">
 
-        <div className="hero-shapes" aria-hidden="true">
-          <span className="shape shape-1" />
-          <span className="shape shape-2" />
-          <span className="shape shape-3" />
-          <span className="shape shape-4" />
-          <span className="shape shape-5" />
-        </div>
+    <p className="hero-label">
+      DIGITAL STUDIO
+    </p>
 
-        <div className="hero-image">
-          <img
-            src="/image/hero-bg.png"
-            alt="Aurexa Labs visual"
-          />
-        </div>
+<h1 className="relative -left-[10px] max-w-[760px] text-[clamp(50px,5.1vw,88px)] font-normal leading-[0.88] tracking-[-0.06em]">
 
-        <div className="hero-content">
+  <span className="block text-[#eeeae4]">
+    THE DIGITAL
+  </span>
 
-          <p className="hero-label">
-            DIGITAL STUDIO
-          </p>
+  <span className="block text-[#c7ff00]">
+    PARTNER FOR
+  </span>
 
-          <h1>
-            <span>DIGITAL</span>
-            <br />
-            <span>DESIGN &</span>
-            <br />
-            <span>DEVELOPMENT</span>
-          </h1>
+  <span className="block text-[#eeeae4]">
+    AMBITIOUS BUSINESSES.
+  </span>
 
-          <div className="hero-line" />
+</h1>
 
-       {/* DESKTOP DESCRIPTION */}
-<p className="hero-description hero-description-desktop">
-  We craft meaningful digital experiences where strategy,
-  design and technology come together to create products
-  people remember, use and return to — built with purpose,
-  designed for people and ready for what comes next.
-</p>
+    <div className="hero-line" />
 
-{/* MOBILE DESCRIPTION */}
-<p className="hero-description hero-description-mobile">
-  We craft meaningful digital experiences
-  <br />
-  where strategy, design and technology
-  <br />
-  come together to create products people
-  <br />
-  remember, use and return to — built with
-  <br />
-  purpose, designed for people and ready
-  <br />
-  for what comes next.
-</p>
-          <a
-            href="#work"
-            className="hero-cta"
-          >
-            VIEW OUR WORK
-            <span>↗</span>
-          </a>
+    {/* DESKTOP */}
+    <p className="hero-description hero-description-desktop">
+      We craft meaningful digital experiences where strategy,
+      design and technology come together to create products
+      people remember, use and return to — built with purpose,
+      designed for people and ready for what comes next.
+    </p>
 
-        </div>
+    {/* MOBILE */}
+    <p className="hero-description hero-description-mobile">
+      We craft meaningful digital experiences
+      <br />
+      where strategy, design and technology
+      <br />
+      come together to create products people
+      <br />
+      remember, use and return to — built with
+      <br />
+      purpose, designed for people and ready
+      <br />
+      for what comes next.
+    </p>
 
-        <div className="hero-bottom">
-          <span>DESIGN</span>
-          <i>/</i>
-          <span>DEVELOPMENT</span>
-          <i>/</i>
-          <span>AI SOLUTIONS</span>
-        </div>
+    <a href="#work" className="hero-cta">
+      VIEW OUR WORK
+      <span>↗</span>
+    </a>
 
-      </div>
+  </div>
 
-
-      {/* =================================================
-          MOBILE HERO
-      ================================================= */}
-
-      <div className="hero-mobile">
-
-        <div className="mobile-grid" />
-
-        <div className="mobile-ghost">
-          AUREXA
-        </div>
-
-
-        {/* TOP */}
-
-        {/* <div className="mobile-top">
-
-          <div className="mobile-brand">
-            <span />
-            AUREXA LABS
-          </div>
-
-          <div className="mobile-menu">
-            <span />
-            <span />
-          </div>
-
-        </div> */}
-
-
-        {/* CENTER */}
-
-        <div className="mobile-main">
-
-          <div className="mobile-label">
-            DIGITAL STUDIO
-          </div>
-
-
-          <div className="mobile-line-top" />
-
-
-          <h1 className="mobile-aurexa">
-            AUREXA
-          </h1>
-
-
-          <div className="mobile-subline">
-
-            <span>IMAGINE.</span>
-
-            <span className="accent">
-              BUILD.
-            </span>
-
-            <span>EVOLVE.</span>
-
-          </div>
-
-
-          <div className="mobile-positioning">
-
-            <span>DIGITAL EXPERIENCES</span>
-
-            <strong>
-              BUILT WITH PURPOSE.
-            </strong>
-
-          </div>
-
-
-          <p className="mobile-description">
-            We create meaningful digital
-            experiences where design meets tech.
-          </p>
-
-
-          <a
-            href="#work"
-            className="mobile-cta"
-          >
-            <span>VIEW OUR WORK</span>
-            <b>↗</b>
-          </a>
-
-        </div>
-
-
-        {/* BOTTOM */}
-
-        <div className="mobile-bottom">
-
-          <div className="mobile-services">
-            <span>DESIGN</span>
-            <i>/</i>
-            <span>DEVELOPMENT</span>
-            <i>/</i>
-            <span>AI</span>
-          </div>
-
-          <div className="mobile-scroll">
-            <span>SCROLL</span>
-            <b>↓</b>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
+  {/* Bottom categories */}
+  <div className="hero-bottom">
+    <span>DESIGN</span>
+    <i>/</i>
+    <span>DEVELOPMENT</span>
+    <i>/</i>
+    <span>AI SOLUTIONS</span>
+  </div>
+</section>
   );
 }
