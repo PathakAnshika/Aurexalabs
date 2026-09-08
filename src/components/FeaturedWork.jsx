@@ -30,7 +30,7 @@ const selectedWork = [
     title: "PROJECT MANAGEMENT SYSTEM",
     category: "WEB APPLICATION / DASHBOARD",
     year: "2026",
-    image: "/image/project.png",
+    image: "/image/Project.png",
     slug: "project-management",
     description:
       "A structured business application designed to manage projects, tasks, teams and everyday operations from one place.",
