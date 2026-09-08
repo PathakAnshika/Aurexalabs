@@ -132,11 +132,13 @@ export default function CaseStudiesPage() {
             transition={{
               duration: 0.8,
             }}
-            className="mb-7 flex items-center gap-3 text-[9px] tracking-[0.2em] text-[#eeeae4]/45 sm:mb-8 sm:gap-4 sm:text-[11px] sm:tracking-[0.22em]"
-          >
-            <span>CASE STUDIES</span>
+           className="mb-7 flex items-center gap-3 text-[9px] tracking-[0.2em] sm:mb-8 sm:gap-4 sm:text-[11px] sm:tracking-[0.22em]"
+>
+  <span className="text-[#eeeae4]">CASE</span>
 
-            <span className="h-px w-8 bg-[#eeeae4]/20 sm:w-12" />
+  <span className="text-[#eeeae4]/35">STUDIES</span>
+
+  <span className="h-px w-8 bg-[#eeeae4]/20 sm:w-12" />
 
             <span>08 STORIES</span>
           </motion.div>

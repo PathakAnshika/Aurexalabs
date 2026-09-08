@@ -3227,8 +3227,7 @@ body {
 }
 
 .process-heading h2 em {
-  color: var(--neon);
-
+  color: rgba(238, 234, 228, 0.35);
   font-style: italic;
 }
 
@@ -3776,7 +3775,7 @@ body {
 .impact-header h2 em {
   font-style: normal;
 
-  color: #c7ff00;
+  color: #545552;
 }
 
 
@@ -4868,7 +4867,7 @@ body {
 .clients-header h2 em {
   font-style: normal;
 
-  color: #c7ff00;
+  color: #3b3b34;
 }
 
 .clients-header {
@@ -6151,13 +6150,10 @@ body {
 
 
 .work-hero h1 em {
-  color: var(--neon);
-
+  color: #63605d;
   font-style: italic;
-
   font-weight: 400;
 }
-
 
 /* =========================================
    HERO DESCRIPTION

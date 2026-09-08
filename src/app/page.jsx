@@ -4,8 +4,9 @@ import FeaturedWork from "@/components/FeaturedWork";
 import BigStatement from "@/components/Bigstatement";
 import Services from "@/components/Services";
 import Process from "@/components/Process";
-import Impact from "../components/Impact";
-import About from "@/components/About";
+import BuiltForBuisness from "../components/BuiltForBuissness";
+// import Industries from "../components/Industries";
+// import About from "@/components/About";
 import Clients from "@/components/Clients";
 import Contact from "@/components/Contact";
 export default function Home() {
@@ -23,8 +24,9 @@ export default function Home() {
     <BigStatement />
      <Services />
      <Process />
-     <Impact />
-     <About />
+     <BuiltForBuisness />
+     {/* <Industries /> */}
+     {/* <About /> */}
      <Clients />
      <Contact /> 
     </main>

@@ -4,31 +4,38 @@ export default function ServicesSection() {
   const services = [
     {
       number: "01",
-      title: "WEB",
-      label: "DIGITAL EXPERIENCES",
-      text: "Websites and digital experiences built to give ambitious businesses a stronger presence.",
+      title: "DIGITAL",
+      label: "WEB / UI UX / E-COMMERCE",
+      text: "Websites and digital experiences designed to give businesses a stronger, clearer and more memorable digital presence.",
       side: "left",
     },
     {
       number: "02",
-      title: "PRODUCT",
-      label: "APPLICATIONS & PLATFORMS",
-      text: "Digital products designed around people, purpose and the way businesses actually work.",
+      title: "CREATIVE",
+      label: "BRANDING / GRAPHICS / TEMPLATES",
+      text: "Visual systems and creative assets that help businesses communicate consistently across every touchpoint.",
       side: "right",
     },
     {
       number: "03",
-      title: "SYSTEMS",
-      label: "BUSINESS TECHNOLOGY",
-      text: "Custom software and platforms that make complex operations simpler.",
+      title: "GROWTH",
+      label: "SEO / MARKETING / SOCIAL",
+      text: "Digital strategies that help businesses reach the right people, build visibility and turn attention into growth.",
       side: "left",
     },
     {
       number: "04",
-      title: "AI",
-      label: "INTELLIGENCE & AUTOMATION",
-      text: "AI-powered workflows that remove repetitive work and create smarter processes.",
+      title: "TECHNOLOGY",
+      label: "WEB APPS / DESKTOP / SOFTWARE / SYSTEMS",
+      text: "Custom applications and business systems built to solve real problems and make operations work better.",
       side: "right",
+    },
+    {
+      number: "05",
+      title: "AI",
+      label: "AUTOMATION / INTELLIGENCE / WORKFLOWS",
+      text: "AI-powered solutions and automation that reduce repetitive work and create smarter ways to operate.",
+      side: "left",
     },
   ];
 
@@ -60,19 +67,16 @@ export default function ServicesSection() {
             <div
               key={service.number}
               className={`group relative border-t border-[#eeeae4]/10 py-12 sm:py-16 md:py-20 ${
-                index === services.length - 1
-                  ? "border-b"
-                  : ""
+                index === services.length - 1 ? "border-b" : ""
               }`}
             >
               <div
                 className={`grid items-center gap-8 md:grid-cols-2 ${
-                  service.side === "right"
-                    ? "md:text-right"
-                    : ""
+                  service.side === "right" ? "md:text-right" : ""
                 }`}
               >
-                {/* LEFT SIDE */}
+
+                {/* MAIN SERVICE */}
                 <div
                   className={`${
                     service.side === "right"
@@ -91,7 +95,18 @@ export default function ServicesSection() {
                       {service.number}
                     </span>
 
-                    <h2 className="text-[clamp(64px,9vw,135px)] font-normal leading-[0.75] tracking-[-0.075em] transition-transform duration-500 group-hover:translate-x-2">
+                    <h2
+                      className={`
+                        font-normal leading-[0.78] tracking-[-0.075em]
+                        transition-transform duration-500
+                        group-hover:translate-x-2
+                        ${
+                          service.title === "TECHNOLOGY"
+                            ? "text-[clamp(54px,6.7vw,108px)]"
+                            : "text-[clamp(64px,9vw,135px)]"
+                        }
+                      `}
+                    >
                       {service.title}
                     </h2>
                   </div>
@@ -105,21 +120,21 @@ export default function ServicesSection() {
                   >
                     <span className="h-px w-8 bg-[#c7ff00]/40" />
 
-                    <span className="text-[9px] tracking-[0.2em] text-[#625d57] sm:text-[10px]">
-                      {service.label}
-                    </span>
+                    <span className="text-[10px] font-medium tracking-[0.18em] text-[#eeeae4]/65 transition-colors duration-500 group-hover:text-[#c7ff00] sm:text-[11px]">
+  {service.label}
+</span>
                   </div>
                 </div>
 
                 {/* DESCRIPTION */}
                 <div
-                  className={`max-w-[360px] ${
+                  className={`max-w-[500px] ${
                     service.side === "right"
                       ? "md:col-start-1 md:row-start-1 md:justify-self-end md:text-left"
                       : "md:col-start-2 md:justify-self-start md:text-left"
                   }`}
                 >
-                  <p className="text-[12px] leading-6 text-[#eeeae4]/30 transition-colors duration-500 group-hover:text-[#eeeae4]/55 sm:text-[13px] sm:leading-7">
+                  <p className="text-[14px] leading-7 text-[#eeeae4]/40 transition-colors duration-500 group-hover:text-[#eeeae4]/65 sm:text-[15px] sm:leading-8">
                     {service.text}
                   </p>
                 </div>
@@ -141,7 +156,7 @@ export default function ServicesSection() {
       {/* BOTTOM NOTE */}
       <div className="mt-12 flex items-center justify-between sm:mt-16">
         <span className="text-[9px] tracking-[0.2em] text-[#625d57] sm:text-[10px]">
-          DESIGN / DEVELOPMENT / INTELLIGENCE
+          DIGITAL / CREATIVE / GROWTH / TECHNOLOGY / AI
         </span>
 
         <Link
@@ -149,6 +164,7 @@ export default function ServicesSection() {
           className="group inline-flex items-center gap-4 text-[9px] tracking-[0.25em] text-[#eeeae4] transition-colors duration-300 hover:text-[#c7ff00]"
         >
           START A PROJECT
+
           <span className="text-[15px] text-[#c7ff00] transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
             ↗
           </span>
