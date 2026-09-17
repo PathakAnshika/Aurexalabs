@@ -14,13 +14,16 @@ export default function Hero() {
     <span className="shape shape-5" />
   </div>
 
-  {/* Left visual */}
-  <div className="hero-image">
-    <img
-      src="/image/hero-bg.png"
-      alt="Aurexa Labs visual"
-    />
-  </div>
+ {/* Left visual */}
+<div className="hero-image">
+  <img
+    src="/image/hero-bg.png"
+    alt="Aurexa Labs visual"
+  />
+
+  {/* Soft fade into background */}
+  <div className="hero-image-fade" aria-hidden="true" />
+</div>
 
   {/* Right content */}
   <div className="hero-content">
