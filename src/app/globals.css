@@ -780,7 +780,7 @@ body {
   z-index: 1;
   overflow: hidden;
 
-  background: #080808;
+  background: #101010;
 }
 
 .hero-image img {
@@ -806,6 +806,18 @@ body {
     contrast(.98);
 }
 
+.hero-image-fade {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    to right,
+    rgba(16, 16, 16, 0) 45%,
+    rgba(16, 16, 16, 0.25) 62%,
+    rgba(16, 16, 16, 0.7) 78%,
+    #101010 100%
+  );
+}
 
 /* smooth cinematic transition into the dark content area */
 
