@@ -3693,7 +3693,64 @@ body {
   }
 }
 
+/* =========================================================
+   MOBILE PROCESS — COMPACT SCROLL
+========================================================= */
 
+@media (max-width: 767px) {
+
+  .process-section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .process-heading {
+    margin-bottom: 55px;
+  }
+
+  .process-list {
+    gap: 0;
+  }
+
+  .process-step {
+    min-height: auto;
+    height: auto;
+    padding-top: 0;
+    padding-bottom: 70px;
+    margin: 0;
+  }
+
+  .process-step:last-child {
+    padding-bottom: 0;
+  }
+
+  .process-step-content {
+    min-height: auto;
+    height: auto;
+  }
+
+  .process-step-index {
+    height: 100%;
+  }
+
+  .process-step-content h3 {
+    margin-bottom: 24px;
+  }
+
+  .process-step-copy {
+    margin-bottom: 22px;
+  }
+
+  .process-step-words {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .process-step-side {
+    display: none;
+  }
+
+}
 
 /* =========================================================
    AUREXA LABS — IMPACT
