@@ -1,31 +1,36 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
 export default function ShriChandreshwarDhamPage() {
+  const router = useRouter();
   return (
     <main className="mandir-project-page">
 
       {/* NAV */}
 
-      <nav className="mandir-nav">
+     <nav className="mandir-nav">
 
-        <Link href="/#clients" className="mandir-back">
-          <span>←</span>
-          <span>Back</span>
-        </Link>
+  <button
+    type="button"
+    onClick={() => router.back()}
+    className="mandir-back"
+  >
+    <span>←</span>
+    <span>Back</span>
+  </button>
 
-        <div className="mandir-nav-center">
-          AUREXA LABS
-        </div>
+  <div className="mandir-nav-center">
+    AUREXA LABS
+  </div>
 
-        <div className="mandir-nav-index">
-          01 / 04
-        </div>
+  <div className="mandir-nav-index">
+    01 / 04
+  </div>
 
-      </nav>
-
+</nav>
 
       {/* HERO */}
 

@@ -140,32 +140,28 @@ export default function Contact() {
 
         {/* CTA */}
 
-        <motion.a
-          href="/start-a-project"
-          className="contact-button"
-
-          initial={{
-            opacity: 0,
-            y: 25,
-            scale: 0.96,
-          }}
-
-          animate={{
-            opacity: isInView ? 1 : 0,
-            y: isInView ? 0 : 25,
-            scale: isInView ? 1 : 0.96,
-          }}
-
-          transition={{
-            duration: 0.9,
-            delay: 0.8,
-            ease: [0.22, 1, 0.36, 1],
-          }}
-        >
-          START A PROJECT
-          <span>↗</span>
-        </motion.a>
-
+       <motion.a
+  href="/start-a-project"
+  className="contact-button"
+  initial={{
+    opacity: 0,
+    y: 25,
+    scale: 0.96,
+  }}
+  animate={{
+    opacity: isInView ? 1 : 0,
+    y: isInView ? 0 : 25,
+    scale: isInView ? 1 : 0.96,
+  }}
+  transition={{
+    duration: 0.9,
+    delay: 0.8,
+    ease: [0.22, 1, 0.36, 1],
+  }}
+>
+  <span className="contact-text">START A PROJECT</span>
+  <span className="contact-arrow">↗</span>
+</motion.a>
       </div>
 
     </section>

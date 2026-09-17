@@ -11,7 +11,7 @@ const caseStudies = [
     year: "2026",
     description:
       "A complete digital experience created to bring the spiritual identity of Shri Chandreshwar Dham online — connecting devotees, visitors and the wider community through a thoughtful and accessible platform.",
-    slug: "shri-chandreshwar",
+    slug: "shri-chandreshwar-dham",
   },
   {
     number: "02",

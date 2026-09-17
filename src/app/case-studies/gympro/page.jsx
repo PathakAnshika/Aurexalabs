@@ -1,7 +1,6 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import Link from "next/link";
 import { motion } from "framer-motion";
 
 const reveal = {
@@ -16,9 +15,7 @@ const reveal = {
   },
 };
 
-
-
-  export default function CaseStudyPage() {
+export default function CaseStudyPage() {
   const router = useRouter();
 
   return (
@@ -30,51 +27,71 @@ const reveal = {
 
       <section className="px-[5vw] pt-7 pb-24 sm:pt-9 sm:pb-28 lg:pb-32">
 
-        {/* top navigation */}
+        {/* BACK */}
         <div className="flex items-center justify-between border-b border-[#eeeae4]/10 pb-5">
-        <button
-  type="button"
-  onClick={() => router.back()}
-  className="group flex items-center gap-3 text-[9px] tracking-[0.22em] text-[#eeeae4]/40 transition-colors duration-300 hover:text-[#eeeae4]"
->
-  <span className="text-[#c7ff00] transition-transform duration-300 group-hover:-translate-x-1">
-    ←
-  </span>
-  BACK
-</button>
+
+          <button
+            type="button"
+            onClick={() => router.back()}
+            className="group flex items-center gap-3 text-[9px] tracking-[0.22em] text-[#eeeae4]/40 transition-colors duration-300 hover:text-[#eeeae4]"
+          >
+            <span className="text-[#c7ff00] transition-transform duration-300 group-hover:-translate-x-1">
+              ←
+            </span>
+            BACK
+          </button>
 
           <span className="hidden text-[9px] tracking-[0.22em] text-[#eeeae4]/20 sm:block">
             01 / 2026
           </span>
+
         </div>
 
-        {/* intro */}
+
+        {/* INTRO */}
+
         <motion.div
           variants={reveal}
           initial="hidden"
           animate="visible"
           className="mt-24 lg:mt-32"
         >
+
           <p className="mb-7 text-[9px] tracking-[0.22em] text-[#eeeae4]/30">
-            SHRI CHANDRESHWAR DHAM
+            GYMPRO
           </p>
 
+
           <h1 className="max-w-[1050px] text-[clamp(42px,5.8vw,78px)] font-normal leading-[0.94] tracking-[-0.06em]">
-            A place of faith,
+            A modern gym experience,
             <br />
             <span className="text-[#c7ff00]">
-              brought into digital.
+              built for the digital age.
             </span>
           </h1>
 
+
           <p className="mt-11 max-w-[1150px] text-[16px] leading-[1.85] text-[#eeeae4]/50 sm:text-[17px]">
-            Shri Chandreshwar Dham needed a digital presence that could bring
-            its story, community and everyday information together without
-            losing the feeling of the place itself. The project was about
-            finding a thoughtful balance between a modern digital experience
-            and an identity rooted in faith, culture and community.
+            GymPro is a digital experience created for a modern gym management
+            platform — bringing product positioning, interface design and a
+            clear SaaS experience together into one focused digital presence.
           </p>
+
+
+          {/* LIVE WEBSITE */}
+
+          <a
+            href="https://gym-frontend-seven-tawny.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 inline-flex items-center gap-3 border-b border-[#c7ff00]/40 pb-2 text-[9px] tracking-[0.2em] text-[#c7ff00] transition-colors duration-300 hover:border-[#c7ff00] hover:text-[#eeeae4]"
+          >
+            VISIT WEBSITE
+            <span>↗</span>
+          </a>
+
         </motion.div>
+
       </section>
 
 
@@ -86,7 +103,8 @@ const reveal = {
 
         <div className="grid lg:grid-cols-[150px_minmax(0,1fr)] lg:gap-20">
 
-          {/* section label */}
+          {/* SECTION LABEL */}
+
           <div className="mb-10 lg:mb-0">
             <span className="text-[9px] tracking-[0.22em] text-[#eeeae4]/25">
               02 / THE STORY
@@ -94,7 +112,8 @@ const reveal = {
           </div>
 
 
-          {/* story */}
+          {/* STORY */}
+
           <motion.article
             variants={reveal}
             initial="hidden"
@@ -103,155 +122,170 @@ const reveal = {
             className="w-full max-w-[1250px]"
           >
 
-            {/* opening thought */}
+            {/* OPENING */}
+
             <p className="max-w-[1200px] text-[clamp(24px,3vw,40px)] leading-[1.12] tracking-[-0.04em] text-[#eeeae4]/82">
-              When we began working on Shri Chandreshwar Dham, the challenge
-              was never simply to make a website. It was to understand what
-              the Dham represents and find a way to communicate that feeling
-              online.
+              GymPro began with a simple idea: a gym management platform
+              should feel as modern and considered as the businesses using it.
+              The experience needed to communicate that from the very first
+              interaction.
             </p>
 
 
-            {/* wide paragraphs */}
             <div className="mt-12 space-y-7">
 
               <p className="max-w-[1180px] text-[15px] leading-[1.85] text-[#eeeae4]/47 sm:text-[16px]">
-                Shri Chandreshwar Dham is deeply connected with devotion,
-                spirituality and the local community. For people who already
-                knew the Dham, the digital experience needed to feel familiar.
-                For someone discovering it for the first time, it needed to
-                provide enough context to understand its story, purpose and
-                significance.
+                The project was not approached as just another gym website.
+                GymPro needed a digital identity that could position the
+                product clearly while making the experience easy to understand
+                for the people discovering it.
               </p>
 
-              <p className="max-w-[1180px] text-[15px] leading-[1.85] text-[#eeeae4]/47 sm:text-[16px]">
-                There was a lot that needed to come together — the story of the
-                Dham, festivals and important updates, donations, scholarship
-                initiatives, the gallery, contact details and location
-                information. The challenge was bringing all of this together
-                without making the experience feel like a conventional
-                information portal.
-              </p>
 
               <p className="max-w-[1180px] text-[15px] leading-[1.85] text-[#eeeae4]/47 sm:text-[16px]">
-                We approached the project from the visitor&apos;s perspective.
-                What would someone want to know first? What would help them
-                understand the Dham? Which information needed to be immediately
-                accessible, and what could be discovered naturally as they
-                explored?
+                That meant finding a balance between product communication and
+                interface design. The platform had to feel capable and
+                professional without becoming complicated or overwhelming.
+                Every part of the experience needed to support that balance.
               </p>
 
+
               <p className="max-w-[1180px] text-[15px] leading-[1.85] text-[#eeeae4]/47 sm:text-[16px]">
-                Instead of treating every piece of information as an isolated
-                page, we focused on creating one calm digital journey. The
-                information architecture was kept clear, the storytelling was
-                given room to breathe, and the visual language was designed to
-                support the identity of the Dham rather than compete with it.
+                We focused on creating a clear visual language around the
+                product — giving the interface enough structure to communicate
+                functionality while keeping the overall experience modern,
+                direct and approachable.
+              </p>
+
+
+              <p className="max-w-[1180px] text-[15px] leading-[1.85] text-[#eeeae4]/47 sm:text-[16px]">
+                The result was designed around clarity. Instead of making the
+                product compete for attention with unnecessary visual elements,
+                the design gives the core experience room to speak for itself.
               </p>
 
             </div>
 
 
-            {/* subtle transition */}
+            {/* SUBTLE TRANSITION */}
+
             <div className="my-20 h-px w-full bg-[#eeeae4]/10 sm:my-24" />
 
 
-            {/* second part */}
+            {/* SECOND PART */}
+
             <p className="max-w-[1200px] text-[clamp(23px,2.8vw,38px)] leading-[1.12] tracking-[-0.04em] text-[#eeeae4]/78">
-              The idea was simple: technology should make the experience
-              easier to understand without taking attention away from the
-              place itself.
+              The goal was never to make a system look complicated. It was to
+              make something powerful feel simple.
             </p>
+
 
             <div className="mt-12 space-y-7">
 
               <p className="max-w-[1180px] text-[15px] leading-[1.85] text-[#eeeae4]/47 sm:text-[16px]">
-                Typography, spacing, hierarchy and interaction were therefore
-                treated as tools rather than decoration. The experience needed
-                to feel modern and accessible while remaining respectful to
-                the spiritual and cultural identity behind it.
+                Product positioning and UI design were therefore treated as
+                parts of the same experience. The visual direction was built
+                to give GymPro a distinct presence while keeping the product
+                itself at the centre.
               </p>
 
-              <p className="max-w-[1180px] text-[15px] leading-[1.85] text-[#eeeae4]/47 sm:text-[16px]">
-                The final website brings the different sides of Shri
-                Chandreshwar Dham together in one connected digital
-                experience. Its story has space to be understood, festivals
-                and updates can be communicated clearly, and donation and
-                scholarship initiatives make the community work behind the
-                Dham easier to discover.
-              </p>
 
               <p className="max-w-[1180px] text-[15px] leading-[1.85] text-[#eeeae4]/47 sm:text-[16px]">
-                A dedicated gallery adds a visual layer, while contact and
-                location information remain simple to find. The experience was
-                also designed to work naturally across mobile, tablet and
-                desktop, so the quality of the experience does not depend on
-                where someone discovers it.
+                From the structure of the pages to the hierarchy of the
+                interface, the experience was kept intentional. Information
+                needed to be easy to scan, interactions needed to feel natural,
+                and the overall product needed to communicate confidence
+                without unnecessary complexity.
               </p>
 
+
               <p className="max-w-[1180px] text-[15px] leading-[1.85] text-[#eeeae4]/47 sm:text-[16px]">
-                In the end, the website became more than a collection of
-                pages. It became a digital point of connection between the
-                Dham, its existing community and people discovering it for the
-                first time.
+                GymPro ultimately became a digital experience that connects
+                the product story with the interface itself — giving the
+                platform a clearer identity and creating a more focused way for
+                people to understand what it offers.
+              </p>
+
+
+              <p className="max-w-[1180px] text-[15px] leading-[1.85] text-[#eeeae4]/47 sm:text-[16px]">
+                It is a reminder that good product design does not always need
+                to say more. Sometimes, the strongest experience comes from
+                knowing what matters and giving it the space to be understood.
               </p>
 
             </div>
 
 
-            {/* closing — still part of story */}
+            {/* CLOSING */}
+
             <div className="mt-20 border-t border-[#eeeae4]/10 pt-10 sm:mt-24">
 
               <p className="max-w-[1050px] text-[clamp(26px,3.3vw,46px)] leading-[1.08] tracking-[-0.045em] text-[#eeeae4]/78">
-                A digital experience built not just to inform, but to create a
-                first connection with a place of{" "}
+                A digital experience designed to make a complex product feel
                 <span className="text-[#c7ff00]">
-                  faith.
+                  {" "}clear.
                 </span>
               </p>
 
+
               <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-[8px] tracking-[0.2em] text-[#eeeae4]/22">
-                <span>SHRI CHANDRESHWAR DHAM</span>
-                <span>DESIGN</span>
-                <span>DEVELOPMENT</span>
-                <span>DIGITAL EXPERIENCE</span>
+                <span>GYMPRO</span>
+                <span>UI DESIGN</span>
+                <span>WEB DEVELOPMENT</span>
+                <span>SAAS EXPERIENCE</span>
               </div>
 
             </div>
 
           </motion.article>
+
         </div>
+
       </section>
 
 
       {/* BACK */}
+
       <section className="border-t border-[#eeeae4]/10 px-[5vw]">
-        <Link
-          href="/case-studies"
-          className="group flex items-center justify-between py-10"
+
+        <button
+          type="button"
+          onClick={() => router.back()}
+          className="group flex w-full items-center justify-between py-10 text-left"
         >
+
           <div>
+
             <span className="text-[8px] tracking-[0.22em] text-[#eeeae4]/22">
               AUREXA LABS
             </span>
 
             <p className="mt-3 text-[17px] tracking-[-0.02em] text-[#eeeae4]/55 transition-colors duration-300 group-hover:text-[#eeeae4]">
-              Back to case studies
+              Back
             </p>
+
           </div>
+
 
           <span className="text-xl text-[#c7ff00] transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1">
             ↗
           </span>
-        </Link>
+
+        </button>
+
       </section>
 
 
       {/* FOOTER */}
+
       <footer className="flex flex-col gap-3 border-t border-[#eeeae4]/10 px-[5vw] py-6 text-[8px] tracking-[0.18em] text-[#eeeae4]/22 sm:text-[9px] md:flex-row md:items-center md:justify-between">
+
         <span>AUREXA LABS</span>
+
         <span>DIGITAL / DESIGN / TECHNOLOGY</span>
+
         <span>BEYOND THE ORDINARY.</span>
+
       </footer>
 
     </main>

@@ -1,9 +1,9 @@
 export default function BigStatement() {
   return (
-    <section className="relative overflow-hidden bg-[#101010] px-[2vw] pb-16 pt-4 text-[#eeeae4] sm:pb-20 sm:pt-6 md:pb-24 md:pt-8">
+    <section className="relative overflow-hidden bg-[#101010] px-[2vw] pb-20 pt-6 text-[#eeeae4] sm:pb-24 sm:pt-8 md:pb-28 md:pt-10">
 
       {/* Top meta */}
-      <div className="mb-10 flex items-center justify-between sm:mb-12 md:mb-14">
+      <div className="mb-12 flex items-center justify-between sm:mb-14 md:mb-16">
         <span className="text-[9px] tracking-[0.25em] text-[#c7ff00] sm:text-[10px]">
           02 / OUR APPROACH
         </span>
@@ -14,61 +14,69 @@ export default function BigStatement() {
       </div>
 
 
-      {/* Statement */}
-      <h2
-        className="
-          w-full
-          text-[clamp(38px,6.8vw,125px)]
-          font-normal
-          uppercase
-          leading-[0.9]
-          tracking-[-0.045em]
+      {/* BIG STATEMENT */}
 
-          sm:tracking-[-0.055em]
-          md:tracking-[-0.065em]
-        "
-      >
+   <h2
+  className="
+    w-full
+    text-[clamp(40px,5.5vw,98px)]
+    font-normal
+    uppercase
+    leading-[0.86]
+    tracking-[-0.055em]
+    md:tracking-[-0.06em]
+  "
+>
+  {/* DESKTOP */}
+  <span className="hidden md:block">
 
-        {/* Desktop */}
-        <span className="hidden md:block">
-          I BUILT AUREXA TO TURN
-          <span className="text-[#eeeae4]/35">
-            {" "}CURIOSITY INTO CRAFT.
-          </span>
-          <br />
+    <span className="block">
+      I BUILT AUREXA TO TURN CURIOSITY
+    </span>
 
-          <span className="text-[#eeeae4]/35">
-            TECHNOLOGY INTO
-          </span>{" "}
-          <span>
-            SOMETHING REAL.
-          </span>
-        </span>
+    <span className="block text-[#eeeae4]/35">
+      INTO CRAFT, IDEAS INTO FORM,
+    </span>
+
+    <span className="block">
+      <span className="text-[#eeeae4]/35">
+        AND TECHNOLOGY INTO
+      </span>{" "}
+      REAL EXPERIENCES.
+    </span>
+
+  </span>
 
 
-        {/* Mobile */}
-        <span className="block md:hidden">
-          I BUILT AUREXA
-          <br />
+  {/* MOBILE */}
+<span className="block md:hidden">
 
-          <span className="text-[#eeeae4]/35">
-            TO TURN CURIOSITY
-          </span>
-          <br />
+  <span className="block">
+    I BUILT AUREXA
+  </span>
 
-          INTO CRAFT.
-          <br />
+  <span className="block text-[#eeeae4]/35">
+    TO TURN CURIOSITY
+  </span>
 
-          <span className="text-[#eeeae4]/35">
-            TECHNOLOGY INTO
-          </span>
-          <br />
+  <span className="block">
+    INTO CRAFT.
+  </span>
 
-          SOMETHING REAL.
-        </span>
+  <span className="block text-[#eeeae4]/35">
+    IDEAS INTO FORM.
+  </span>
 
-      </h2>
+  <span className="block">
+    TECHNOLOGY INTO
+  </span>
 
+  <span className="block text-[#eeeae4]/35">
+    REAL EXPERIENCES.
+  </span>
+
+</span>
+</h2>
     </section>
   );
 }
