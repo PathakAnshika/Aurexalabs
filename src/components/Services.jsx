@@ -188,34 +188,33 @@ export default function ServicesSection() {
 
                     {/* TITLE */}
 
-                    <h2
-                      className={`
-                        min-w-0
-                        break-words
-                        font-normal
-                        leading-[0.82]
-                        tracking-[-0.07em]
-                        transition-transform
-                        duration-500
-                        group-hover:translate-x-1
+                  <h2
+  className={`
+    whitespace-nowrap
+    font-normal
+    leading-[0.82]
+    tracking-[-0.07em]
+    transition-transform
+    duration-500
+    group-hover:translate-x-1
 
-                        ${
-                          service.title === "TECHNOLOGY"
-                            ? `
-                              text-[clamp(36px,11vw,68px)]
-                              sm:text-[clamp(54px,6.7vw,108px)]
-                            `
-                            : `
-                              text-[clamp(46px,14vw,76px)]
-                              sm:text-[clamp(64px,9vw,135px)]
-                            `
-                        }
+    ${
+      service.title === "TECHNOLOGY"
+        ? `
+          text-[clamp(36px,11vw,68px)]
+          sm:text-[clamp(54px,6.7vw,108px)]
+        `
+        : `
+          text-[clamp(46px,14vw,76px)]
+          sm:text-[clamp(64px,9vw,135px)]
+        `
+    }
 
-                        md:group-hover:translate-x-2
-                      `}
-                    >
-                      {service.title}
-                    </h2>
+    md:group-hover:translate-x-2
+  `}
+>
+  {service.title}
+</h2>
 
                   </div>
 
