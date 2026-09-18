@@ -127,12 +127,12 @@ export default function Contact() {
 
          <div className="contact-links">
 
-  <a
-    href="work.aurexalabs@gmail.com"
-    className="contact-link"
-  >
-    EMAIL <span>↗</span>
-  </a>
+ <a
+  href="mailto:work.aurexalabs@gmail.com"
+  className="contact-link"
+>
+  EMAIL <span>↗</span>
+</a>
 
   <a
     href="https://wa.me/918815631914"
