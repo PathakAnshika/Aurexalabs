@@ -58,7 +58,7 @@ const selectedWork = [
 export default function SelectedWork() {
   return (
     <section
-      id="work"
+      id="FeaturedWork"
       className="overflow-hidden bg-[#101010] px-[5vw] py-24 text-[#eeeae4] sm:py-28 md:py-36"
     >
       {/* ================= HEADER ================= */}

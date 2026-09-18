@@ -7,7 +7,7 @@ const caseStudies = [
   {
     number: "01",
     client: "SHRI CHANDRESHWAR DHAM",
-    category: "DIGITAL EXPERIENCE",
+    category: "WEB PAGE",
     year: "2026",
     description:
       "A complete digital experience created to bring the spiritual identity of Shri Chandreshwar Dham online — connecting devotees, visitors and the wider community through a thoughtful and accessible platform.",
@@ -16,7 +16,7 @@ const caseStudies = [
   {
     number: "02",
     client: "PRINVICK",
-    category: "ECOMMERCE",
+    category: "WEB PAGE",
     year: "2026",
     description:
       "An ecommerce experience designed around product discovery, clear navigation and a smoother path from browsing to purchase.",
@@ -24,21 +24,21 @@ const caseStudies = [
   },
   {
     number: "03",
-    client: "INVENTORY MANAGEMENT",
-    category: "APPLICATION",
+    client: "GYMPRO",
+    category: "WEB PAGE",
     year: "2026",
     description:
       "A practical management system built to bring products, stock and operational workflows into one focused digital environment.",
-    slug: "inventory-management",
+    slug: "gympro",
   },
   {
     number: "04",
-    client: "ERP / HRMS",
+    client: "PROJECT MANAGEMENT SYSTEM",
     category: "SYSTEM DESIGN",
     year: "2026",
     description:
       "A structured digital system bringing business operations and people management together through a clear, scalable interface.",
-    slug: "erp-hrms",
+    slug: "pms",
   },
   {
     number: "05",
@@ -47,7 +47,7 @@ const caseStudies = [
     year: "2026",
     description:
       "An application experience designed around real-world workflows, information visibility and everyday usability.",
-    slug: "tenneco-system",
+    slug: "tenneco",
   },
   {
     number: "06",
@@ -56,7 +56,7 @@ const caseStudies = [
     year: "2026",
     description:
       "From visual direction to interface thinking, this project explores how branding and digital design can work as one system.",
-    slug: "brand-uiux",
+    slug: "Design",
   },
   {
     number: "07",
@@ -104,16 +104,16 @@ export default function CaseStudiesPage() {
 
      <section className="relative flex min-h-0 flex-col justify-start px-[5vw] pb-10 pt-16 sm:pb-12 sm:pt-20 md:min-h-[92vh] md:justify-between md:pb-16 md:pt-24">
 
-        <Link
-          href="/"
-          className="group inline-flex w-fit items-center gap-3 text-[10px] font-medium tracking-[0.2em] text-[#eeeae4]/60 transition-colors duration-300 hover:text-[#c7ff00] sm:text-[11px]"
-        >
-          <span className="text-lg transition-transform duration-300 group-hover:-translate-x-1">
-            ←
-          </span>
+       <Link
+  href="/"
+  className="group -mt-8 inline-flex w-fit items-center gap-3 text-[10px] font-medium tracking-[0.2em] text-[#eeeae4]/60 transition-colors duration-300 hover:text-[#c7ff00] sm:-mt-8 sm:text-[11px]"
+>
+  <span className="text-lg transition-transform duration-300 group-hover:-translate-x-1">
+    ←
+  </span>
 
-          BACK HOME
-        </Link>
+  BACK
+</Link>
 
 
         <div className="mt-[125px] md:mt-auto">
@@ -173,36 +173,60 @@ export default function CaseStudiesPage() {
 
           {/* SUBTITLE */}
 
-          <motion.div
-            initial={{
-              opacity: 0,
-              y: 30,
-            }}
-            animate={{
-              opacity: 1,
-              y: 0,
-            }}
-            transition={{
-              duration: 0.8,
-              delay: 0.45,
-            }}
-            className="mt-8 max-w-[600px] sm:mt-12 md:ml-[32%]"
-          >
-            <p className="text-base leading-relaxed text-[#eeeae4]/65 sm:text-lg md:text-xl">
-              The work is only half the story.
-              <br />
-              Here&apos;s what happened behind it.
-            </p>
-          </motion.div>
+         {/* SUBTITLE */}
 
+<motion.div
+  initial={{
+    opacity: 0,
+    y: 30,
+  }}
+  animate={{
+    opacity: 1,
+    y: 0,
+  }}
+  transition={{
+    duration: 0.8,
+    delay: 0.45,
+  }}
+  className="mt-10 w-full sm:mt-12 md:mt-14"
+>
+  <p
+    className="
+      w-full
+      max-w-[1450px]
+      text-left
+      text-[16px]
+      leading-7
+      tracking-[-0.01em]
+      text-[#eeeae4]/55
+
+      sm:text-[18px]
+      sm:leading-7
+
+      md:text-[21px]
+      md:leading-8
+
+      lg:text-[23px]
+      lg:leading-9
+    "
+  >
+    The work is only half the story. Behind every digital experience is a
+    process of questions, ideas, decisions, experiments and countless small
+    details that shape what eventually reaches people. From the first idea to
+    the final interaction, we take complex problems and turn them into digital
+    experiences that feel simple, intentional and useful — combining strategy,
+    design and technology to create work that has a clear purpose and a reason
+    to exist.
+  </p>
+</motion.div>
         </div>
 
 
         {/* HERO BOTTOM */}
 
-        <div className="mt-12 flex items-end justify-between border-t border-[#eeeae4]/10 pt-4 text-[8px] tracking-[0.17em] text-[#eeeae4]/35 sm:mt-16 sm:pt-5 sm:text-[10px] sm:tracking-[0.2em] md:mt-20">
+        {/* <div className="mt-12 flex items-end justify-between border-t border-[#eeeae4]/10 pt-4 text-[8px] tracking-[0.17em] text-[#eeeae4]/35 sm:mt-16 sm:pt-5 sm:text-[10px] sm:tracking-[0.2em] md:mt-20"> */}
 
-          <span className="max-w-[180px] leading-4 sm:max-w-none">
+          {/* <span className="max-w-[180px] leading-4 sm:max-w-none">
             STRATEGY / DESIGN / DEVELOPMENT
           </span>
 
@@ -212,71 +236,14 @@ export default function CaseStudiesPage() {
 
           <span>
             2026
-          </span>
+          </span> */}
 
-        </div>
-
-      </section>
-
-
-      {/* =====================================================
-          INTRO
-      ===================================================== */}
-
-      <section className="relative border-t border-[#eeeae4]/10 px-[5vw] py-20 sm:py-24 md:py-32">
-
-        <div className="grid gap-12 md:grid-cols-[0.75fr_2.25fr] md:gap-16">
-
-          {/* LEFT */}
-
-          <div>
-
-            <span className="text-[9px] tracking-[0.25em] text-[#c7ff00] sm:text-[10px]">
-              WHAT WE DO
-            </span>
-
-            <div className="mt-6 text-[9px] leading-5 tracking-[0.16em] text-[#eeeae4]/30 sm:mt-8 sm:text-[10px] sm:tracking-[0.18em]">
-              <p>THINK.</p>
-              <p>CREATE.</p>
-              <p>REFINE.</p>
-            </div>
-
-          </div>
-
-
-          {/* RIGHT */}
-
-          <div>
-
-            <h2 className="max-w-[1000px] text-[clamp(44px,7vw,100px)] font-medium leading-[0.9] tracking-[-0.06em]">
-              Ideas become
-              <br />
-
-              <span className="text-[#eeeae4]/35">
-                experiences.
-              </span>
-            </h2>
-
-
-            <div className="mt-10 flex flex-col gap-7 border-t border-[#eeeae4]/10 pt-7 sm:mt-12 sm:gap-8 sm:pt-8 md:flex-row md:items-start md:justify-between">
-
-              <p className="max-w-[520px] text-sm leading-6 text-[#eeeae4]/45 sm:text-base sm:leading-7 md:text-lg">
-                From the first idea to the final interaction,
-                we turn complex problems into digital experiences
-                that feel simple, intentional and useful.
-              </p>
-
-              <span className="text-[9px] tracking-[0.18em] text-[#eeeae4]/25 sm:text-[10px] sm:tracking-[0.2em]">
-                DESIGN × TECHNOLOGY
-              </span>
-
-            </div>
-
-          </div>
-
-        </div>
+        {/* </div> */}
 
       </section>
+
+
+  
 
 
       {/* =====================================================
@@ -289,7 +256,7 @@ export default function CaseStudiesPage() {
 
         <div className="mb-10 flex items-end justify-between sm:mb-14 md:mb-16">
 
-          <div>
+          {/* <div>
 
             <span className="text-[9px] tracking-[0.25em] text-[#c7ff00] sm:text-[10px]">
               SELECTED CASES
@@ -303,7 +270,7 @@ export default function CaseStudiesPage() {
 
           <span className="hidden text-[9px] tracking-[0.2em] text-[#eeeae4]/20 sm:block">
             08 PROJECTS
-          </span>
+          </span> */}
 
         </div>
 

@@ -280,7 +280,7 @@ export default function Industries() {
           CLOSING STATEMENT
       ===================================================== */}
 
-      <section className="px-[5vw] py-24 sm:py-28 md:py-36">
+      {/* <section className="px-[5vw] py-24 sm:py-28 md:py-36">
         <div className="border-t border-[#eeeae4]/10 pt-8">
 
           <div className="flex flex-col gap-10 md:flex-row md:items-end md:justify-between">
@@ -302,7 +302,7 @@ export default function Industries() {
           </div>
 
         </div>
-      </section>
+      </section> */}
 
 
       {/* =====================================================

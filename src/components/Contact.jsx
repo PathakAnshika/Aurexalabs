@@ -17,22 +17,18 @@ export default function Contact() {
       className="contact-section"
       id="contact"
     >
-
       {/* LABEL */}
 
       <motion.div
         className="contact-label"
-
         initial={{
           opacity: 0,
           y: 20,
         }}
-
         animate={{
           opacity: isInView ? 1 : 0,
           y: isInView ? 0 : 20,
         }}
-
         transition={{
           duration: 0.8,
           ease: [0.22, 1, 0.36, 1],
@@ -41,13 +37,10 @@ export default function Contact() {
         CONTACT / 08
       </motion.div>
 
-
       {/* HEADING */}
 
       <div className="contact-heading">
-
         <h2>
-
           <motion.span
             className="contact-heading-line"
             initial={{
@@ -95,36 +88,31 @@ export default function Contact() {
           >
             worth <em>building?</em>
           </motion.span>
-
         </h2>
-
       </div>
-
 
       {/* BOTTOM */}
 
       <div className="contact-bottom">
 
+        {/* COPY */}
+
         <motion.div
           className="contact-copy"
-
           initial={{
             opacity: 0,
             y: 25,
           }}
-
           animate={{
             opacity: isInView ? 1 : 0,
             y: isInView ? 0 : 25,
           }}
-
           transition={{
             duration: 0.9,
             delay: 0.65,
             ease: [0.22, 1, 0.36, 1],
           }}
         >
-
           <p>
             Have an idea, a product or a problem
             worth solving? Let’s talk about what
@@ -135,35 +123,78 @@ export default function Contact() {
             AUREXA LABS / INDIA / WORLDWIDE
           </span>
 
-        </motion.div>
+          {/* SMALL CONTACT ROW */}
 
+         <div className="contact-links">
+
+  <a
+    href="work.aurexalabs@gmail.com"
+    className="contact-link"
+  >
+    EMAIL <span>↗</span>
+  </a>
+
+  <a
+    href="https://wa.me/918815631914"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="contact-link contact-whatsapp"
+  >
+    WHATSAPP <span>↗</span>
+  </a>
+
+  <a
+    href="https://www.instagram.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="contact-link"
+  >
+    INSTAGRAM <span>↗</span>
+  </a>
+
+  <a
+    href="https://www.linkedin.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="contact-link"
+  >
+    LINKEDIN <span>↗</span>
+  </a>
+
+</div>
+        </motion.div>
 
         {/* CTA */}
 
-       <motion.a
-  href="/start-a-project"
-  className="contact-button"
-  initial={{
-    opacity: 0,
-    y: 25,
-    scale: 0.96,
-  }}
-  animate={{
-    opacity: isInView ? 1 : 0,
-    y: isInView ? 0 : 25,
-    scale: isInView ? 1 : 0.96,
-  }}
-  transition={{
-    duration: 0.9,
-    delay: 0.8,
-    ease: [0.22, 1, 0.36, 1],
-  }}
->
-  <span className="contact-text">START A PROJECT</span>
-  <span className="contact-arrow">↗</span>
-</motion.a>
-      </div>
+        <motion.a
+          href="/start-a-project"
+          className="contact-button"
+          initial={{
+            opacity: 0,
+            y: 25,
+            scale: 0.96,
+          }}
+          animate={{
+            opacity: isInView ? 1 : 0,
+            y: isInView ? 0 : 25,
+            scale: isInView ? 1 : 0.96,
+          }}
+          transition={{
+            duration: 0.9,
+            delay: 0.8,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+        >
+          <span className="contact-text">
+            START A PROJECT
+          </span>
 
+          <span className="contact-arrow">
+            ↗
+          </span>
+        </motion.a>
+
+      </div>
     </section>
   );
 }

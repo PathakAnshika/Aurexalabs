@@ -73,7 +73,7 @@ export default function Hero() {
       for what comes next.
     </p>
 
-    <a href="#work" className="hero-cta">
+    <a href="#FeaturedWork" className="hero-cta">
       VIEW OUR WORK
       <span>↗</span>
     </a>
