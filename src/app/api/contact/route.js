@@ -46,8 +46,8 @@ export async function POST(request) {
 
     const { data, error } =
       await resend.emails.send({
-        from:
-          "Aurexa Labs <onboarding@resend.dev>",
+       from:
+  "Aurexa Labs <hello@aurexalabs.in>",
 
         to: [
           process.env.CONTACT_EMAIL,

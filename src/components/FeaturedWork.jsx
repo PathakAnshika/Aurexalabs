@@ -42,12 +42,12 @@ const selectedWork = [
   },
   {
     number: "04",
-    title: "BILLING MANAGEMENT",
+    title: "PRINVICK-TSHIRT PRINTING",
     category: "BUSINESS SOFTWARE / POS",
     year: "2026",
-    image: "/image/Billing.png",
-    slug: "billing-management",
-    website: "https://YOUR-BILLING-WEBSITE.com",
+    image: "/image/prinvick.png",
+    slug: "prinvick",
+    website: "https://prinvick-website.vercel.app/",
     description:
       "A practical billing system built to simplify sales, customers, products, collections and day-to-day business management.",
     size: "medium",

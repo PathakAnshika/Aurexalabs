@@ -100,14 +100,26 @@ export default function Navbar() {
       <div className="hidden items-center justify-between md:flex">
 
         {/* LOGO */}
-        <Link
-          href="/"
-          className="group flex items-center gap-3 text-[10px] font-medium tracking-[0.22em] text-[#eeeae4] transition-colors duration-300 hover:text-[#c7ff00]"
-        >
-          <span className="h-1.5 w-1.5 rounded-full bg-[#c7ff00] transition-transform duration-300 group-hover:scale-125" />
+       <Link
+  href="/"
+  className="flex items-center gap--1.5"
+>
+  <img
+    src="/image/logo.png"
+    alt="Aurexa Labs"
+    className="h-7 w-auto object-contain"
+  />
 
-          AUREXA LABS
-        </Link>
+  <div className="flex flex-col leading-none">
+    <span className="font-[var(--font-inter)] text-[10px] font-medium tracking-[0.16em] text-[#eeeae4]">
+      AUREXA
+    </span>
+
+    <span className="mt-[3px] font-[var(--font-inter)] text-[6px] tracking-[0.34em] text-[#eeeae4]/45">
+      LABS
+    </span>
+  </div>
+</Link>
 
         {/* NAV */}
         <nav className="flex items-center gap-8 lg:gap-10">

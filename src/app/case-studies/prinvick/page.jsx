@@ -146,7 +146,7 @@ export default function CaseStudyPage() {
           {/* LIVE WEBSITE */}
 
           <a
-            href="https://www.prinvick.com"
+            href="https://prinvick-website.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="
