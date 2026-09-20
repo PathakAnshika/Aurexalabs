@@ -168,22 +168,22 @@ export default function Navbar() {
       <div className="flex items-center justify-between md:hidden">
 
         {/* LOGO */}
-       <Link
+     <Link
   href="/"
-  className="flex items-center gap-1.5"
+  className="flex items-center gap-2 sm:gap-1.5"
 >
   <img
     src="/image/Logo.png"
     alt="Aurexa Labs"
-    className="h-5 w-auto object-contain sm:h-6"
+    className="h-7 w-auto object-contain sm:h-6"
   />
 
   <div className="flex flex-col leading-none">
-    <span className="text-[9px] font-medium tracking-[0.1em] text-[#eeeae4]">
+    <span className="text-[11px] font-medium tracking-[0.1em] text-[#eeeae4] sm:text-[9px]">
       AUREXA
     </span>
 
-    <span className="mt-[2px] text-[4.5px] tracking-[0.24em] text-[#eeeae4]/45">
+    <span className="mt-[2px] text-[5.5px] tracking-[0.24em] text-[#eeeae4]/45 sm:text-[4.5px]">
       LABS
     </span>
   </div>
