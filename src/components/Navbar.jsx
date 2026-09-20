@@ -170,7 +170,7 @@ export default function Navbar() {
         {/* LOGO */}
      <Link
   href="/"
-  className="flex items-center gap-2 sm:gap-1.5"
+  className="flex items-center gap-2 sm:gap-0"
 >
   <img
     src="/image/Logo.png"
