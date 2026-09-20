@@ -168,15 +168,26 @@ export default function Navbar() {
       <div className="flex items-center justify-between md:hidden">
 
         {/* LOGO */}
-        <Link
-          href="/"
-          onClick={closeMenu}
-          className="group flex items-center gap-3 text-[9px] tracking-[0.22em] text-[#eeeae4]"
-        >
-          <span className="h-1.5 w-1.5 rounded-full bg-[#c7ff00]" />
+       <Link
+  href="/"
+  className="flex items-center gap-1.5"
+>
+  <img
+    src="/image/logo.png"
+    alt="Aurexa Labs"
+    className="h-5 w-auto object-contain sm:h-6"
+  />
 
-          AUREXA LABS
-        </Link>
+  <div className="flex flex-col leading-none">
+    <span className="text-[9px] font-medium tracking-[0.1em] text-[#eeeae4]">
+      AUREXA
+    </span>
+
+    <span className="mt-[2px] text-[4.5px] tracking-[0.24em] text-[#eeeae4]/45">
+      LABS
+    </span>
+  </div>
+</Link>
 
         {/* HAMBURGER / CLOSE BUTTON */}
         <button
