@@ -105,7 +105,7 @@ export default function Navbar() {
   className="flex items-center gap--1.5"
 >
   <img
-    src="/image/logo.png"
+    src="/image/Logo.png"
     alt="Aurexa Labs"
     className="h-7 w-auto object-contain"
   />
@@ -173,7 +173,7 @@ export default function Navbar() {
   className="flex items-center gap-1.5"
 >
   <img
-    src="/image/logo.png"
+    src="/image/Logo.png"
     alt="Aurexa Labs"
     className="h-5 w-auto object-contain sm:h-6"
   />
