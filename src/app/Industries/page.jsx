@@ -340,7 +340,7 @@ export default function Industries() {
             </p>
 
             <Link
-              href="/contact"
+              href="/Let's-talk"
               className="group inline-flex items-center gap-5 border-b border-[#eeeae4]/30 pb-3 text-[10px] tracking-[0.24em] transition-all duration-300 hover:border-[#eeeae4] "
             >
               <span>LET&apos;S TALK</span>

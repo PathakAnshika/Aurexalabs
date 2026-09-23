@@ -54,7 +54,7 @@ export default function Clients() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          TRUSTED BY / 07
+          TRUSTED BY / 06
         </motion.span>
 
         <motion.h2

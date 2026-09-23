@@ -85,7 +85,7 @@ export default function Process() {
       >
 
         <span className="process-eyebrow">
-          PROCESS / 04
+          PROCESS / 03
         </span>
 
         <h2>

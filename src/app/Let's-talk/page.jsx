@@ -428,10 +428,13 @@ const handleSubmit = async (e) => {
                     conversation with Aurexa Labs.
                   </p>
 
-                 <button
+            <button
   type="submit"
   disabled={loading}
-  className="group inline-flex w-fit items-center gap-5 border-b border-[#d9ff3f]/50 pb-3 text-sm text-white transition-colors hover:border-[#d9ff3f] hover:text-[#d9ff3f] disabled:cursor-not-allowed disabled:opacity-40"
+  className="group inline-flex w-fit items-center gap-5 border-b border-[#d9ff3f]/50 pb-3 text-sm text-white transition-colors hover:border-[#d9ff3f] hover:text-[#d9ff3f]"
+  style={{
+    cursor: loading ? "not-allowed" : "pointer",
+  }}
 >
   {loading ? "SENDING..." : "Send inquiry"}
 

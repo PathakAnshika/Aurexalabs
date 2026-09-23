@@ -34,7 +34,7 @@ export default function Contact() {
           ease: [0.22, 1, 0.36, 1],
         }}
       >
-        CONTACT / 08
+        CONTACT / 07
       </motion.div>
 
       {/* HEADING */}

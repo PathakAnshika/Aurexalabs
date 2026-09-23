@@ -6064,8 +6064,7 @@ body {
 
 .project-prev:disabled {
   opacity: 0.25;
-
-  cursor: default;
+  cursor: none;
 }
 
 .project-next {
