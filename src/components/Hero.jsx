@@ -50,36 +50,42 @@ export default function Hero() {
 
     <div className="hero-line" />
 
-    {/* DESKTOP */}
-    <p className="hero-description hero-description-desktop">
-      We craft meaningful digital experiences where strategy,
-      design and technology come together to create products
-      people remember, use and return to — built with purpose,
-      designed for people and ready for what comes next.
-    </p>
+{/* DESKTOP */}
+<p className="hero-description hero-description-desktop">
+  We help businesses turn ideas, challenges and everyday processes
+  into meaningful digital experiences — from websites and e-commerce
+  to custom applications, business systems and intelligent solutions.
+</p>
 
-    {/* MOBILE */}
-    <p className="hero-description hero-description-mobile">
-      We craft meaningful digital experiences
-      <br />
-      where strategy, design and technology
-      <br />
-      come together to create products people
-      <br />
-      remember, use and return to — built with
-      <br />
-      purpose, designed for people and ready
-      <br />
-      for what comes next.
-    </p>
+{/* MOBILE */}
+<p className="hero-description hero-description-mobile">
+  We help businesses turn ideas and challenges
+  <br />
+  into meaningful digital experiences —
+  <br />
+  from websites and e-commerce to custom
+  <br />
+  applications, business systems and
+  <br />
+  intelligent solutions.
+</p>
 
-    <a href="#FeaturedWork" className="hero-cta">
-      VIEW OUR WORK
-      <span>↗</span>
-    </a>
+<div className="hero-actions">
+  <a href="#FeaturedWork" className="hero-cta">
+    EXPLORE OUR WORK
+    <span>↗</span>
+  </a>
 
-  </div>
+  <a href="#StartProject" className="hero-cta hero-cta-secondary">
+    TELL US ABOUT YOUR BUSINESS
+    <span>↗</span>
+  </a>
+</div>
 
+<p className="hero-supporting-text">
+  Not sure what you need? That's okay — we'll help you figure it out.
+</p>
+</div>
   {/* Bottom categories */}
   <div className="hero-bottom">
     <span>DESIGN</span>
