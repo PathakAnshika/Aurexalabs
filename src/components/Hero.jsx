@@ -70,7 +70,7 @@ export default function Hero({ onGuideOpen }) {
 </p>
 
 {/* SUPPORT LINE */}
-<button
+{/* <button
   type="button"
   onClick={onGuideOpen}
   className="hero-support"
@@ -80,12 +80,12 @@ export default function Hero({ onGuideOpen }) {
   <span className="hero-support-link">
     Let’s figure it out together ↗
   </span>
-</button>
+</button> */}
 
-{/* <a href="#FeaturedWork" className="hero-cta">
+ <a href="#FeaturedWork" className="hero-cta">
   EXPLORE OUR WORK
   <span>↗</span>
-</a> */}
+</a> 
 
 </div>
   {/* Bottom categories */}
