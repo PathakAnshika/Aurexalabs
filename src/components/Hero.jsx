@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 
-export default function Hero() {
+export default function Hero({ onGuideOpen }) {
   return (
    <section className="hero">
   {/* Geometric background */}
@@ -47,8 +47,7 @@ export default function Hero() {
   </span>
 
 </h1>
-
-    <div className="hero-line" />
+<div className="hero-line" />
 
 {/* DESKTOP */}
 <p className="hero-description hero-description-desktop">
@@ -70,21 +69,24 @@ export default function Hero() {
   intelligent solutions.
 </p>
 
-<div className="hero-actions">
-  <a href="#FeaturedWork" className="hero-cta">
-    EXPLORE OUR WORK
-    <span>↗</span>
-  </a>
+{/* SUPPORT LINE */}
+<button
+  type="button"
+  onClick={onGuideOpen}
+  className="hero-support"
+>
+  <span>Not sure what your business needs?</span>
 
-  <a href="#StartProject" className="hero-cta hero-cta-secondary">
-    TELL US ABOUT YOUR BUSINESS
-    <span>↗</span>
-  </a>
-</div>
+  <span className="hero-support-link">
+    Let’s figure it out together ↗
+  </span>
+</button>
 
-<p className="hero-supporting-text">
-  Not sure what you need? That's okay — we'll help you figure it out.
-</p>
+{/* <a href="#FeaturedWork" className="hero-cta">
+  EXPLORE OUR WORK
+  <span>↗</span>
+</a> */}
+
 </div>
   {/* Bottom categories */}
   <div className="hero-bottom">
