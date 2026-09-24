@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-export default function CyamsysPage() {
+export default function PrinvickPage() {
   return (
     <main className="client-detail-page">
 
@@ -22,7 +22,7 @@ export default function CyamsysPage() {
         </span>
 
         <span className="detail-index">
-          02 / 04
+          01 / 04
         </span>
       </nav>
 
@@ -41,7 +41,7 @@ export default function CyamsysPage() {
         >
           CLIENT PROJECT
           <span>—</span>
-          WEBSITE
+          E-COMMERCE
         </motion.div>
 
 
@@ -54,9 +54,9 @@ export default function CyamsysPage() {
             ease: [0.22, 1, 0.36, 1],
           }}
         >
-          Cyamsys
+          Prinvick
           <br />
-          <span>Technologies.</span>
+          <span>Wear Your Idea.</span>
         </motion.h1>
 
 
@@ -67,9 +67,9 @@ export default function CyamsysPage() {
           transition={{ duration: 1, delay: 0.5 }}
         >
           <p>
-            A professional digital experience
-            designed and developed for
-            Cyamsys Technologies.
+            A custom T-shirt shopping experience
+            where personal style meets creativity
+            and technology.
           </p>
 
           <div className="scroll-indicator">
@@ -113,7 +113,7 @@ export default function CyamsysPage() {
             </div>
 
             <div className="browser-url">
-              CYAMSYS TECHNOLOGIES
+              PRINVICK / CUSTOM T-SHIRTS
             </div>
 
           </div>
@@ -126,29 +126,29 @@ export default function CyamsysPage() {
             <div className="preview-content">
 
               <span className="preview-label">
-                CYAMSYS TECHNOLOGIES
+                PRINVICK / CUSTOM APPAREL
               </span>
 
               <h2>
-                Technology.
+                Your Style.
                 <br />
-                <i>Made Simple.</i>
+                <i>Your Rules.</i>
               </h2>
 
               <p>
-                Digital solutions built for
-                modern businesses.
+                Create something that is
+                uniquely yours.
               </p>
 
-             <a
-  href="https://www.cyamsys.com"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="preview-button"
->
-  Explore
-  <span>↗</span>
-</a>
+              <a
+                href="https://prinvick-website.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="preview-button"
+              >
+                Explore Store
+                <span>↗</span>
+              </a>
 
             </div>
 
@@ -176,9 +176,9 @@ export default function CyamsysPage() {
 
           <div className="detail-info-heading">
             <h2>
-              Building a digital
+              Making every
               <br />
-              <em>presence.</em>
+              <em>idea wearable.</em>
             </h2>
           </div>
 
@@ -186,16 +186,21 @@ export default function CyamsysPage() {
           <div className="detail-info-text">
 
             <p>
-              Cyamsys Technologies needed a modern
-              digital presence that could communicate
-              its services clearly while maintaining a
-              professional and trustworthy appearance.
+              Prinvick is a custom T-shirt
+              e-commerce experience built around
+              personal expression and creative freedom.
+              Instead of choosing only from finished
+              products, users can make a design
+              their own.
             </p>
 
             <p>
-              The website was designed with a focus on
-              clean layouts, strong typography and a
-              smooth user experience across devices.
+              The experience brings together product
+              discovery, customization and live
+              previews, allowing customers to explore
+              T-shirts, upload their own artwork and
+              personalize the front and back of
+              their products.
             </p>
 
           </div>
@@ -220,22 +225,24 @@ export default function CyamsysPage() {
 
           <div className="detail-data-item">
             <span>CLIENT</span>
-            <strong>Cyamsys Technologies</strong>
+            <strong>Prinvick</strong>
           </div>
 
           <div className="detail-data-item">
             <span>PROJECT</span>
-            <strong>Website</strong>
+            <strong>Custom T-Shirt E-commerce</strong>
           </div>
 
           <div className="detail-data-item">
             <span>SERVICE</span>
-            <strong>Web Design & Development</strong>
+            <strong>
+              UI / UX Design & Development
+            </strong>
           </div>
 
           <div className="detail-data-item">
             <span>YEAR</span>
-            <strong>2024</strong>
+            <strong>2026</strong>
           </div>
 
         </div>
@@ -262,11 +269,11 @@ export default function CyamsysPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            Simple.
+            Made to
             <br />
-            <em>Intentional.</em>
+            <em>explore.</em>
             <br />
-            Effective.
+            Built to create.
           </motion.h2>
 
 
@@ -274,22 +281,22 @@ export default function CyamsysPage() {
 
             <div>
               <span>01</span>
-              <p>Clear visual hierarchy</p>
+              <p>Intuitive product discovery</p>
             </div>
 
             <div>
               <span>02</span>
-              <p>Modern responsive interface</p>
+              <p>Interactive T-shirt customization</p>
             </div>
 
             <div>
               <span>03</span>
-              <p>Focused user experience</p>
+              <p>Live front and back previews</p>
             </div>
 
             <div>
               <span>04</span>
-              <p>Professional brand presentation</p>
+              <p>Personalized shopping experience</p>
             </div>
 
           </div>
@@ -305,18 +312,22 @@ export default function CyamsysPage() {
 
       <section className="detail-final">
 
-        <span>SELECTED CLIENT / 02</span>
+        <span>SELECTED CLIENT / 01</span>
 
         <h2>
-          Let's build
+          Your idea.
           <br />
-          something <em>great.</em>
+          Your <em>creation.</em>
         </h2>
 
-        <Link href="/#contact">
-          Start a project
+        <a
+          href="https://prinvick-website.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Explore Prinvick
           <span>↗</span>
-        </Link>
+        </a>
 
       </section>
 
