@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from "react";
@@ -11,7 +12,7 @@ import Process from "@/components/Process";
 import BuiltForBuisness from "../components/BuiltForBuissness";
 import Clients from "@/components/Clients";
 import Contact from "@/components/Contact";
-import AurexaGuide from "../components/AurexaGuide";
+import QuickChat from "@/components/QuickChat";
 
 export default function Home() {
   const [guideOpen, setGuideOpen] = useState(false);
@@ -30,11 +31,12 @@ export default function Home() {
       <Clients />
       <Contact />
 
-      {guideOpen && (
-        <AurexaGuide
-          onClose={() => setGuideOpen(false)}
-        />
-      )}
+      {/* Aurexa AI Quick Chat */}
+      <QuickChat
+        isOpen={guideOpen}
+        onOpen={() => setGuideOpen(true)}
+        onClose={() => setGuideOpen(false)}
+      />
     </main>
   );
 }
