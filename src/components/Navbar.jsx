@@ -1,4 +1,4 @@
-"use client";
+ "use client";
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -94,215 +94,942 @@ export default function Navbar() {
   };
 
   return (
-    <header className="fixed left-0 top-0 z-[100] w-full px-[5vw] pt-5 sm:pt-6">
+    <>
+      <header className="fixed left-0 top-0 z-[100] w-full px-[5vw] pt-5 sm:pt-6">
 
-      {/* ================= DESKTOP ================= */}
-      <div className="hidden items-center justify-between md:flex">
+        {/* ================= DESKTOP ================= */}
+        <div className="hidden items-center justify-between md:flex">
 
-        {/* LOGO */}
-       <Link
-  href="/"
-  className="flex items-center gap--1.5"
->
-  <img
-    src="/image/Logo.png"
-    alt="Aurexa Labs"
-    className="h-7 w-auto object-contain"
-  />
+          {/* LOGO */}
+          <Link
+            href="/"
+            className="flex items-center gap-2.5"
+          >
+            <img
+              src="/image/Logo.png"
+              alt="Aurexa Labs"
+              className="h-8 w-auto object-contain"
+            />
 
-  <div className="flex flex-col leading-none">
-    <span className="font-[var(--font-inter)] text-[10px] font-medium tracking-[0.16em] text-[#eeeae4]">
-      AUREXA
-    </span>
+            <div className="flex flex-col leading-none">
+              <span className="font-[var(--font-inter)] text-[10px] font-medium tracking-[0.16em] text-[#eeeae4]">
+                AUREXA
+              </span>
 
-    <span className="mt-[3px] font-[var(--font-inter)] text-[6px] tracking-[0.34em] text-[#eeeae4]/45">
-      LABS
-    </span>
-  </div>
-</Link>
+              <span className="mt-[3px] font-[var(--font-inter)] text-[6px] tracking-[0.34em] text-[#eeeae4]/45">
+                LABS
+              </span>
+            </div>
+          </Link>
 
-        {/* NAV */}
-        <nav className="flex items-center gap-8 lg:gap-10">
+          {/* NAV */}
+          <nav className="flex items-center gap-8 lg:gap-10">
 
-          {links.map((link) =>
-            link.label === "WORK" ? (
-              <a
-                key={link.number}
-                href="/#FeaturedWork"
-                onClick={handleWorkClick}
-                className="group relative text-[9px] tracking-[0.2em] text-[#eeeae4]/55 transition-colors duration-300 hover:text-[#eeeae4]"
-              >
-                {link.label}
+            {links.map((link) =>
+              link.label === "WORK" ? (
+                <a
+                  key={link.number}
+                  href="/#FeaturedWork"
+                  onClick={handleWorkClick}
+                  className="group relative text-[9px] tracking-[0.2em] text-[#eeeae4]/55 transition-colors duration-300 hover:text-[#eeeae4]"
+                >
+                  {link.label}
 
-                <span className="absolute -bottom-2 left-0 h-px w-0 bg-[#c7ff00] transition-all duration-300 group-hover:w-full" />
-              </a>
-            ) : (
-              <Link
-                key={link.number}
-                href={link.href}
-                className="group relative text-[9px] tracking-[0.2em] text-[#eeeae4]/55 transition-colors duration-300 hover:text-[#eeeae4]"
-              >
-                {link.label}
+                  <span className="absolute -bottom-2 left-0 h-px w-0 bg-[#c7ff00] transition-all duration-300 group-hover:w-full" />
+                </a>
+              ) : (
+                <Link
+                  key={link.number}
+                  href={link.href}
+                  className="group relative text-[9px] tracking-[0.2em] text-[#eeeae4]/55 transition-colors duration-300 hover:text-[#eeeae4]"
+                >
+                  {link.label}
 
-                <span className="absolute -bottom-2 left-0 h-px w-0 bg-[#c7ff00] transition-all duration-300 group-hover:w-full" />
-              </Link>
-            )
-          )}
+                  <span className="absolute -bottom-2 left-0 h-px w-0 bg-[#c7ff00] transition-all duration-300 group-hover:w-full" />
+                </Link>
+              )
+            )}
 
-          {/* CTA */}
+            {/* CTA */}
+            <Link
+              href="/Let's-talk"
+              className="group ml-2 inline-flex items-center gap-3 border-b border-[#eeeae4]/25 pb-2 text-[9px] tracking-[0.2em] text-[#eeeae4] transition-all duration-300 hover:border-[#c7ff00] hover:text-[#c7ff00]"
+            >
+              <span>LET'S TALK</span>
+
+              <span className="text-base transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
+                ↗
+              </span>
+            </Link>
+
+          </nav>
+        </div>
+
+        {/* ================= MOBILE HEADER ================= */}
+        <div className="flex items-center justify-between md:hidden">
+
+          {/* LOGO */}
+          <Link
+            href="/"
+            className="flex items-center gap-1.5"
+          >
+            <img
+              src="/image/Logo.png"
+              alt="Aurexa Labs"
+              className="h-8 w-auto object-contain sm:h-6"
+            />
+
+            <div className="flex flex-col leading-none -ml-1">
+              <span className="text-[11px] font-medium tracking-[0.1em] text-[#eeeae4] sm:text-[9px]">
+                AUREXA
+              </span>
+
+              <span className="mt-[4px] text-[5.5px] tracking-[0.24em] text-[#eeeae4]/45 sm:text-[4.5px]">
+                LABS
+              </span>
+            </div>
+          </Link>
+
+          {/* HAMBURGER / CLOSE BUTTON */}
+          <button
+            ref={buttonRef}
+            type="button"
+            onClick={() =>
+              setMenuOpen((prev) => !prev)
+            }
+            aria-label={
+              menuOpen
+                ? "Close menu"
+                : "Open menu"
+            }
+            aria-expanded={menuOpen}
+            className="relative flex h-10 w-10 items-center justify-center rounded-full border border-[#eeeae4]/15 bg-[#0b0b0b]/80 backdrop-blur-md"
+          >
+            <span
+              className={`absolute h-px w-4 bg-[#eeeae4] transition-transform duration-300 ${
+                menuOpen
+                  ? "rotate-45"
+                  : "-translate-y-1"
+              }`}
+            />
+
+            <span
+              className={`absolute h-px w-4 bg-[#eeeae4] transition-transform duration-300 ${
+                menuOpen
+                  ? "-rotate-45"
+                  : "translate-y-1"
+              }`}
+            />
+          </button>
+
+        </div>
+
+        {/* ================= MOBILE MENU ================= */}
+        <div
+          ref={menuRef}
+          className={`absolute left-[5vw] right-[5vw] top-[72px] overflow-hidden rounded-2xl border border-[#eeeae4]/10 bg-[#111111]/95 shadow-2xl backdrop-blur-xl transition-all duration-500 md:hidden ${
+            menuOpen
+              ? "pointer-events-auto translate-y-0 opacity-100"
+              : "pointer-events-none -translate-y-4 opacity-0"
+          }`}
+        >
+
+          {/* LABEL */}
+          <div className="border-b border-[#eeeae4]/10 px-5 py-5">
+            <span className="text-[8px] tracking-[0.24em] text-[#eeeae4]/30">
+              AUREXA / NAVIGATION
+            </span>
+          </div>
+
+          {/* LINKS */}
+          <nav className="px-5">
+
+            {links.map((link) =>
+              link.label === "WORK" ? (
+                <a
+                  key={link.number}
+                  href="/#FeaturedWork"
+                  onClick={handleWorkClick}
+                  className="group flex items-center gap-4 border-b border-[#eeeae4]/10 py-5"
+                >
+                  <span className="w-6 text-[8px] tracking-[0.18em] text-[#c7ff00]">
+                    {link.number}
+                  </span>
+
+                  <span className="flex-1 text-[11px] tracking-[0.18em] text-[#eeeae4]/75 transition-colors duration-300 group-hover:text-[#eeeae4]">
+                    {link.label}
+                  </span>
+
+                  <span className="text-base text-[#eeeae4]/30 transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-[#c7ff00]">
+                    ↗
+                  </span>
+                </a>
+              ) : (
+                <Link
+                  key={link.number}
+                  href={link.href}
+                  onClick={closeMenu}
+                  className="group flex items-center gap-4 border-b border-[#eeeae4]/10 py-5"
+                >
+                  <span className="w-6 text-[8px] tracking-[0.18em] text-[#c7ff00]">
+                    {link.number}
+                  </span>
+
+                  <span className="flex-1 text-[11px] tracking-[0.18em] text-[#eeeae4]/75 transition-colors duration-300 group-hover:text-[#eeeae4]">
+                    {link.label}
+                  </span>
+
+                  <span className="text-base text-[#eeeae4]/30 transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-[#c7ff00]">
+                    ↗
+                  </span>
+                </Link>
+              )
+            )}
+
+          </nav>
+
+          {/* MOBILE CTA */}
           <Link
             href="/Let's-talk"
-            className="group ml-2 inline-flex items-center gap-3 border-b border-[#eeeae4]/25 pb-2 text-[9px] tracking-[0.2em] text-[#eeeae4] transition-all duration-300 hover:border-[#c7ff00] hover:text-[#c7ff00]"
+            onClick={closeMenu}
+            className="group flex items-center justify-between px-5 py-6"
           >
-            <span>LET'S TALK</span>
+            <span className="text-[10px] tracking-[0.2em] text-[#eeeae4] transition-colors duration-300 group-hover:text-[#c7ff00]">
+              LET'S TALK
+            </span>
 
-            <span className="text-base transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
+            <span className="text-xl transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1">
               ↗
             </span>
           </Link>
 
-        </nav>
-      </div>
-
-      {/* ================= MOBILE HEADER ================= */}
-      <div className="flex items-center justify-between md:hidden">
-
-        {/* LOGO */}
-    <Link
-  href="/"
-  className="flex items-center gap-0"
->
-  <img
-    src="/image/Logo.png"
-    alt="Aurexa Labs"
-    className="h-7 w-auto object-contain sm:h-6"
-  />
-
-  <div className="flex flex-col leading-none -ml-1">
-    <span className="text-[11px] font-medium tracking-[0.1em] text-[#eeeae4] sm:text-[9px]">
-      AUREXA
-    </span>
-
-    <span className="mt-[2px] text-[5.5px] tracking-[0.24em] text-[#eeeae4]/45 sm:text-[4.5px]">
-      LABS
-    </span>
-  </div>
-</Link>
-
-        {/* HAMBURGER / CLOSE BUTTON */}
-        <button
-          ref={buttonRef}
-          type="button"
-          onClick={() =>
-            setMenuOpen((prev) => !prev)
-          }
-          aria-label={
-            menuOpen
-              ? "Close menu"
-              : "Open menu"
-          }
-          aria-expanded={menuOpen}
-          className="relative flex h-10 w-10 items-center justify-center rounded-full border border-[#eeeae4]/15 bg-[#0b0b0b]/80 backdrop-blur-md"
-        >
-          <span
-            className={`absolute h-px w-4 bg-[#eeeae4] transition-transform duration-300 ${
-              menuOpen
-                ? "rotate-45"
-                : "-translate-y-1"
-            }`}
-          />
-
-          <span
-            className={`absolute h-px w-4 bg-[#eeeae4] transition-transform duration-300 ${
-              menuOpen
-                ? "-rotate-45"
-                : "translate-y-1"
-            }`}
-          />
-        </button>
-
-      </div>
-
-      {/* ================= MOBILE MENU ================= */}
-      <div
-        ref={menuRef}
-        className={`absolute left-[5vw] right-[5vw] top-[72px] overflow-hidden rounded-2xl border border-[#eeeae4]/10 bg-[#111111]/95 shadow-2xl backdrop-blur-xl transition-all duration-500 md:hidden ${
-          menuOpen
-            ? "pointer-events-auto translate-y-0 opacity-100"
-            : "pointer-events-none -translate-y-4 opacity-0"
-        }`}
-      >
-
-        {/* LABEL */}
-        <div className="border-b border-[#eeeae4]/10 px-5 py-5">
-          <span className="text-[8px] tracking-[0.24em] text-[#eeeae4]/30">
-            AUREXA / NAVIGATION
-          </span>
         </div>
+      </header>
 
-        {/* LINKS */}
-        <nav className="px-5">
+      <style jsx global>{`
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
 
-          {links.map((link) =>
-            link.label === "WORK" ? (
-              <a
-                key={link.number}
-                href="/#FeaturedWork"
-                onClick={handleWorkClick}
-                className="group flex items-center gap-4 border-b border-[#eeeae4]/10 py-5"
-              >
-                <span className="w-6 text-[8px] tracking-[0.18em] text-[#c7ff00]">
-                  {link.number}
-                </span>
+  width: 100%;
+  height: 90px;
 
-                <span className="flex-1 text-[11px] tracking-[0.18em] text-[#eeeae4]/75 transition-colors duration-300 group-hover:text-[#eeeae4]">
-                  {link.label}
-                </span>
+  z-index: 100;
 
-                <span className="text-base text-[#eeeae4]/30 transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-[#c7ff00]">
-                  ↗
-                </span>
-              </a>
-            ) : (
-              <Link
-                key={link.number}
-                href={link.href}
-                onClick={closeMenu}
-                className="group flex items-center gap-4 border-b border-[#eeeae4]/10 py-5"
-              >
-                <span className="w-6 text-[8px] tracking-[0.18em] text-[#c7ff00]">
-                  {link.number}
-                </span>
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 
-                <span className="flex-1 text-[11px] tracking-[0.18em] text-[#eeeae4]/75 transition-colors duration-300 group-hover:text-[#eeeae4]">
-                  {link.label}
-                </span>
+  padding: 0 52px;
 
-                <span className="text-base text-[#eeeae4]/30 transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-[#c7ff00]">
-                  ↗
-                </span>
-              </Link>
-            )
-          )}
+  background: transparent;
+}
 
-        </nav>
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
 
-        {/* MOBILE CTA */}
-        <Link
-          href="/Let's-talk"
-          onClick={closeMenu}
-          className="group flex items-center justify-between px-5 py-6"
-        >
-          <span className="text-[10px] tracking-[0.2em] text-[#eeeae4] transition-colors duration-300 group-hover:text-[#c7ff00]">
-            LET'S TALK
-          </span>
+.nav-links a {
+  font-family: var(--font-inter), sans-serif;
 
-          <span className="text-xl transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1">
-            ↗
-          </span>
-        </Link>
+  font-size: 10px;
+  font-weight: 400;
 
-      </div>
-    </header>
+  letter-spacing: 0.12em;
+
+  color: #aaa5a0;
+
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #eeeae4;
+}
+
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 11px 18px;
+
+  border: 1px solid rgba(238, 234, 228, 0.28);
+
+  color: #eeeae4 !important;
+
+  background: rgba(255, 255, 255, 0.015);
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.nav-cta:hover {
+  background: rgba(238, 234, 228, 0.05);
+
+  border-color: rgba(238, 234, 228, 0.6);
+}
+
+.nav-arrow {
+  font-size: 14px;
+
+  transition: transform 0.3s ease;
+}
+
+.nav-cta:hover .nav-arrow {
+  transform: translate(2px, -2px);
+}
+
+/* =========================================================
+   MOBILE NAV CARD — FINAL FIX
+========================================================= */
+
+@media screen and (max-width: 800px) {
+
+  .mobile-nav-card {
+    position: fixed !important;
+
+    top: 68px !important;
+    right: 18px !important;
+
+    width: 235px !important;
+
+    padding: 18px !important;
+
+    box-sizing: border-box !important;
+
+    background: #151515 !important;
+
+    border: 1px solid rgba(238, 234, 228, 0.16) !important;
+
+    z-index: 9999 !important;
+
+    display: block !important;
+
+    overflow: hidden !important;
+  }
+
+
+  /* CARD HEADING */
+
+  .mobile-card-label {
+    display: block !important;
+
+    margin: 0 0 12px !important;
+
+    font-family: var(--font-inter), sans-serif !important;
+
+    font-size: 8px !important;
+
+    letter-spacing: .25em !important;
+
+    color: #817b75 !important;
+  }
+
+
+  /* NAV */
+
+  .mobile-nav-card nav {
+    width: 100% !important;
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+  }
+
+
+  /* EACH LINK */
+
+  .mobile-nav-card nav a {
+
+    width: 100% !important;
+
+    min-height: 42px !important;
+
+    box-sizing: border-box !important;
+
+    display: grid !important;
+
+    grid-template-columns: 25px 1fr 20px !important;
+
+    align-items: center !important;
+
+    gap: 5px !important;
+
+    padding: 11px 0 !important;
+
+    margin: 0 !important;
+
+    border-top:
+      1px solid
+      rgba(238, 234, 228, .09) !important;
+
+    font-family:
+      var(--font-inter),
+      sans-serif !important;
+
+    font-size: 14px !important;
+
+    font-weight: 400 !important;
+
+    line-height: 1 !important;
+
+    letter-spacing: .06em !important;
+
+    color: #eeeae4 !important;
+
+    text-decoration: none !important;
+
+    white-space: nowrap !important;
+  }
+
+
+  /* NUMBER */
+
+  .mobile-nav-card nav a span {
+
+    display: block !important;
+
+    font-family:
+      var(--font-inter),
+      sans-serif !important;
+
+    font-size: 7px !important;
+
+    letter-spacing: .1em !important;
+
+    color: #68625c !important;
+  }
+
+
+  /* ARROW */
+
+  .mobile-nav-card nav a b {
+
+    display: block !important;
+
+    justify-self: end !important;
+
+    font-size: 15px !important;
+
+    font-weight: 300 !important;
+
+    line-height: 1 !important;
+
+    color: var(--neon) !important;
+  }
+
+
+  /* LET'S TALK */
+
+  .mobile-card-talk {
+
+    width: 100% !important;
+
+    min-height: 40px !important;
+
+    box-sizing: border-box !important;
+
+    margin-top: 12px !important;
+
+    padding: 12px !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: space-between !important;
+
+    border:
+      1px solid
+      rgba(199, 255, 0, .35) !important;
+
+    font-family:
+      var(--font-inter),
+      sans-serif !important;
+
+    font-size: 8px !important;
+
+    letter-spacing: .18em !important;
+
+    line-height: 1 !important;
+
+    color: #eeeae4 !important;
+
+    text-decoration: none !important;
+  }
+
+
+  .mobile-card-talk b {
+
+    font-size: 15px !important;
+
+    color: var(--neon) !important;
+  }
+
+}
+
+@media screen and (max-width: 800px) {
+
+  /* DESKTOP NAV COMPLETELY OFF */
+
+  header.navbar .nav-links,
+  .navbar .nav-links,
+  nav.nav-links {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+  }
+
+
+  /* MOBILE NAV ONLY */
+
+  .mobile-navbar {
+    display: flex !important;
+
+    position: fixed !important;
+
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+
+    width: 100% !important;
+    height: 72px !important;
+
+    padding: 0 18px !important;
+
+    box-sizing: border-box !important;
+
+    align-items: center !important;
+    justify-content: space-between !important;
+
+    z-index: 10000 !important;
+  }
+
+.mobile-nav-card {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-10px) scale(.97);
+}
+
+.mobile-nav-card.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+  .mobile-nav-logo {
+    display: flex !important;
+
+    align-items: center !important;
+
+    gap: 8px !important;
+
+    font-size: 9px !important;
+    letter-spacing: .25em !important;
+
+    color: #eeeae4 !important;
+
+    white-space: nowrap !important;
+  }
+
+
+  .mobile-nav-logo span {
+    display: block !important;
+
+    width: 7px !important;
+    height: 7px !important;
+
+    flex-shrink: 0 !important;
+
+    border-radius: 50% !important;
+
+    background: #c7ff00 !important;
+  }
+
+
+  /* =========================================================
+   HAMBURGER / CLOSE ICON
+========================================================= */
+
+@media screen and (max-width: 800px) {
+
+  .hamburger {
+    position: relative !important;
+
+    width: 40px !important;
+    height: 40px !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    border: 1px solid rgba(238,234,228,.2) !important;
+
+    background: #101010 !important;
+
+    cursor: pointer !important;
+  }
+
+
+  .hamburger span {
+    position: absolute !important;
+
+    left: 50% !important;
+    top: 50% !important;
+
+    width: 21px !important;
+    height: 1px !important;
+
+    margin: 0 !important;
+
+    background: #eeeae4 !important;
+
+    transform-origin: center !important;
+
+    transition:
+      transform .35s cubic-bezier(.22,1,.36,1),
+      background .25s ease !important;
+  }
+
+
+  /* normal hamburger */
+
+  .hamburger span:first-child {
+    transform:
+      translate(-50%, -4px) !important;
+  }
+
+  .hamburger span:last-child {
+    transform:
+      translate(-50%, 4px) !important;
+
+    background: #c7ff00 !important;
+  }
+
+
+  /* =====================================================
+     OPEN = X
+  ===================================================== */
+
+  .hamburger.open span:first-child {
+    transform:
+      translate(-50%, -50%)
+      rotate(45deg) !important;
+
+    background: #eeeae4 !important;
+  }
+
+
+  .hamburger.open span:last-child {
+    width: 21px !important;
+
+    transform:
+      translate(-50%, -50%)
+      rotate(-45deg) !important;
+
+    background: #c7ff00 !important;
+  }
+
+}
+
+  /* =================================================
+     MENU CARD
+  ================================================= */
+
+  .mobile-nav-card {
+
+    position: fixed !important;
+
+    top: 62px !important;
+    right: 14px !important;
+
+    width: 225px !important;
+
+    padding: 16px !important;
+
+    box-sizing: border-box !important;
+
+    z-index: 9999 !important;
+
+    background: #151515 !important;
+
+    border:
+      1px solid
+      rgba(238,234,228,.16) !important;
+
+    box-shadow:
+      0 20px 50px
+      rgba(0,0,0,.5) !important;
+
+    transform:
+      translateY(-8px)
+      scale(.97) !important;
+
+    transform-origin: top right !important;
+  }
+
+
+  .mobile-nav-card.open {
+    transform:
+      translateY(0)
+      scale(1) !important;
+  }
+
+
+  .mobile-card-label {
+    margin-bottom: 10px !important;
+
+    font-size: 7px !important;
+
+    letter-spacing: .25em !important;
+
+    color: #817b75 !important;
+  }
+
+
+  .mobile-nav-card nav {
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    width: 100% !important;
+  }
+
+
+  .mobile-nav-card nav a {
+
+    width: 100% !important;
+
+    min-height: 42px !important;
+
+    padding: 10px 0 !important;
+
+    box-sizing: border-box !important;
+
+    display: grid !important;
+
+    grid-template-columns:
+      24px
+      1fr
+      18px !important;
+
+    align-items: center !important;
+
+    gap: 5px !important;
+
+    border-top:
+      1px solid
+      rgba(238,234,228,.08) !important;
+
+    font-size: 14px !important;
+
+    line-height: 1 !important;
+
+    white-space: nowrap !important;
+
+    color: #eeeae4 !important;
+
+    text-decoration: none !important;
+  }
+
+
+  .mobile-nav-card nav a span {
+    font-size: 6px !important;
+
+    color: #68625c !important;
+  }
+
+
+  .mobile-nav-card nav a b {
+    justify-self: end !important;
+
+    font-size: 14px !important;
+
+    color: #c7ff00 !important;
+  }
+
+
+  .mobile-card-talk {
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: space-between !important;
+
+    width: 100% !important;
+
+    margin-top: 12px !important;
+
+    padding: 12px !important;
+
+    box-sizing: border-box !important;
+
+    border:
+      1px solid
+      rgba(199,255,0,.35) !important;
+
+    font-size: 8px !important;
+
+    letter-spacing: .18em !important;
+
+    color: #eeeae4 !important;
+  }
+
+}
+
+/* =========================================================
+   NAVBAR — DESKTOP / MOBILE FINAL
+========================================================= */
+
+/* MOBILE ELEMENTS OFF BY DEFAULT */
+.mobile-navbar,
+.mobile-nav-card {
+  display: none !important;
+}
+
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media screen and (min-width: 801px) {
+
+  /* Desktop nav ON */
+  .navbar .nav-links {
+    display: flex !important;
+  }
+
+  /* Mobile completely OFF */
+  .mobile-navbar,
+  .mobile-nav-card {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media screen and (max-width: 800px) {
+
+  /* Desktop nav OFF */
+  .navbar .nav-links {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
+
+  /* Mobile navbar ON */
+
+  .mobile-navbar {
+    display: flex !important;
+
+    position: fixed !important;
+
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+
+    width: 100% !important;
+    height: 72px !important;
+
+    padding: 0 18px !important;
+
+    box-sizing: border-box !important;
+
+    align-items: center !important;
+    justify-content: space-between !important;
+
+    z-index: 10000 !important;
+  }
+
+
+  /* Mobile card hidden until click */
+
+  .mobile-nav-card {
+    display: block !important;
+
+    position: fixed !important;
+
+    top: 65px !important;
+    right: 18px !important;
+
+    width: 230px !important;
+
+    padding: 17px !important;
+
+    box-sizing: border-box !important;
+
+    background: #151515 !important;
+
+    border:
+      1px solid
+      rgba(238,234,228,.16) !important;
+
+    box-shadow:
+      0 20px 50px
+      rgba(0,0,0,.5) !important;
+
+    z-index: 9999 !important;
+
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+
+    transform:
+      translateY(-8px)
+      scale(.97) !important;
+
+    transform-origin: top right !important;
+
+    transition:
+      opacity .25s ease,
+      transform .3s ease,
+      visibility .25s ease !important;
+  }
+
+
+  .mobile-nav-card.open {
+    opacity: 1 !important;
+
+    visibility: visible !important;
+
+    pointer-events: auto !important;
+
+    transform:
+      translateY(0)
+      scale(1) !important;
+  }
+
+}
+      `}</style>
+    </>
   );
 }
+
