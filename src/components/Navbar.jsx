@@ -108,10 +108,10 @@ export default function Navbar() {
             <img
               src="/image/Logo.png"
               alt="Aurexa Labs"
-              className="h-6 w-auto object-contain"
+              className="h-14 w-auto object-contain"
             />
 
-            <div className="flex flex-col leading-none">
+            {/* <div className="flex flex-col leading-none">
               <span className="font-[var(--font-inter)] text-[10px] font-medium tracking-[0.16em] text-[#eeeae4]">
                 AUREXA
               </span>
@@ -119,7 +119,7 @@ export default function Navbar() {
               <span className="mt-[3px] font-[var(--font-inter)] text-[6px] tracking-[0.34em] text-[#eeeae4]/45">
                 LABS
               </span>
-            </div>
+            </div> */}
           </Link>
 
           {/* NAV */}
@@ -179,7 +179,7 @@ export default function Navbar() {
               className="h-8 w-auto object-contain sm:h-6"
             />
 
-            <div className="flex flex-col leading-none -ml-1">
+            {/* <div className="flex flex-col leading-none -ml-1">
               <span className="text-[11px] font-medium tracking-[0.1em] text-[#eeeae4] sm:text-[9px]">
                 AUREXA
               </span>
@@ -187,7 +187,7 @@ export default function Navbar() {
               <span className="mt-[4px] text-[5.5px] tracking-[0.24em] text-[#eeeae4]/45 sm:text-[4.5px]">
                 LABS
               </span>
-            </div>
+            </div> */}
           </Link>
 
           {/* HAMBURGER / CLOSE BUTTON */}
