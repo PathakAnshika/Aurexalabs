@@ -176,7 +176,7 @@ export default function Navbar() {
             <img
               src="/image/Logo.png"
               alt="Aurexa Labs"
-              className="h-8 w-auto object-contain sm:h-6"
+              className="h-10 w-auto object-contain sm:h-6"
             />
 
             {/* <div className="flex flex-col leading-none -ml-1">
